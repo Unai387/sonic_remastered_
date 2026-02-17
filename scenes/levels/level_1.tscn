@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bgkjecdq3blya"]
+[gd_scene format=3 uid="uid://bgkjecdq3blya"]
 
 [ext_resource type="Texture2D" uid="uid://drxvt43vgpqlb" path="res://assets/sprites/Level1.png" id="1_ksju7"]
 [ext_resource type="PackedScene" uid="uid://de2ka5vj0kd7k" path="res://scenes/player/sonic.tscn" id="2_6iamk"]
@@ -9,347 +9,347 @@
 [ext_resource type="PackedScene" uid="uid://g6b1ot6kxx8j" path="res://scenes/objects/goal.tscn" id="7_excbq"]
 [ext_resource type="PackedScene" uid="uid://cuc2cwnxphyqb" path="res://scenes/objects/spike.tscn" id="8_iav0o"]
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" unique_id=986325080]
 position = Vector2(2, 0)
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=665870365]
 texture = ExtResource("1_ksju7")
 centered = false
 
-[node name="Platforms" type="Node2D" parent="."]
+[node name="Platforms" type="Node2D" parent="." unique_id=1263005479]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Platforms"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms" unique_id=805203423]
 
-[node name="ParteBaja" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="ParteBaja" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1431042010]
 build_mode = 1
 polygon = PackedVector2Array(2, 1054, 2, 962, 321, 965, 464, 957, 567, 959, 620, 965, 677, 962, 738, 960, 792, 959, 833, 969, 881, 956, 920, 933, 971, 901, 1028, 890, 1284, 894, 1337, 899, 1393, 896, 1495, 903, 1556, 893, 1627, 904, 1680, 927, 1735, 948, 1801, 964, 1846, 957, 1857, 951, 1873, 940, 1878, 936, 1885, 927, 1888, 922, 1893, 912, 1898, 907, 1898, 901, 2173, 894, 2173, 867, 2234, 862, 2237, 830, 2366, 828, 2368, 783, 3073, 785, 3068, 708, 3125, 706, 3247, 703, 3334, 704, 3376, 709, 3437, 695, 3531, 648, 3637, 638, 3329, 894, 3383, 901, 3445, 906, 3498, 903, 3573, 893, 3647, 899, 3699, 912, 3773, 948, 3802, 959, 3841, 964, 3884, 957, 3928, 962, 3981, 972, 4024, 962, 4077, 962, 4148, 960, 4166, 940, 4201, 928, 4247, 912, 4282, 898, 4350, 891, 4437, 896, 4530, 896, 4622, 891, 4699, 896, 4701, 870, 4760, 862, 4765, 828, 4921, 827, 4926, 780, 4981, 787, 5066, 787, 5121, 780, 5182, 783, 5243, 780, 5253, 825, 5306, 833, 5432, 833, 5428, 1017)
 
-[node name="ParteMedia" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="ParteMedia" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=553535725]
 build_mode = 1
 polygon = PackedVector2Array(3735, 675, 3750, 542, 3816, 522, 3885, 531, 3939, 534, 4019, 524, 4032, 634, 4104, 634, 4182, 653, 4212, 658, 4267, 645, 4312, 638, 4378, 638, 4478, 642, 4478, 611, 4546, 609, 4546, 572, 4699, 582, 4789, 624, 4889, 640, 4948, 643, 5077, 703, 5132, 703, 5191, 706, 5240, 706, 5349, 703, 5409, 703, 5452, 704, 5514, 688, 5538, 682, 5572, 650, 5581, 614, 5581, 609, 5581, 582, 5549, 542, 5549, 542, 5523, 535, 5504, 531, 5485, 534, 5465, 539, 5464, 540, 5441, 555, 5431, 568, 5423, 590, 5420, 606, 5423, 622, 5435, 642, 5444, 656, 5459, 667, 5481, 687, 5602, 708, 5662, 701, 5720, 687, 5773, 658, 5821, 638, 6188, 640, 6200, 638, 6217, 640, 6230, 650, 6235, 658, 6246, 679, 6248, 690, 6241, 713, 6233, 727, 6227, 743, 6221, 762, 6216, 780, 6213, 803, 6213, 817, 6214, 832, 6222, 845, 6232, 862, 6241, 870, 6256, 882, 6267, 888, 6283, 891, 6296, 893, 6317, 904, 6309, 893, 6337, 894, 6366, 898, 6383, 898, 6636, 894, 6721, 896, 6735, 909, 6748, 922, 6758, 933, 6758, 948, 6758, 964, 6748, 986, 6734, 1002, 6726, 1017, 6722, 1038, 6719, 1068, 6721, 1083, 6737, 1104, 6753, 1128, 6769, 1133, 6782, 1139, 6806, 1147, 6850, 1154, 6879, 1154, 6922, 1154, 6943, 1151, 6975, 1149, 6991, 1152, 7009, 1167, 7056, 1184, 7080, 1192, 7093, 1197, 7117, 1209, 7151, 1215, 7181, 1215, 7212, 1215, 7223, 1213, 7236, 1204, 7259, 1184, 7276, 1155, 7289, 1154, 7341, 1154, 7367, 1154, 7387, 1152, 7413, 1151, 7471, 1151, 7528, 1151, 7590, 1152, 7626, 1154, 7663, 1154, 7674, 1154, 7679, 1209, 7724, 1231, 7784, 1218, 7861, 1225, 7956, 1217, 7999, 1217, 8078, 1213, 8114, 1213, 8188, 1217, 8252, 1217, 8307, 1220, 8539, 1217, 8544, 1183, 8646, 1183, 8638, 1149, 9050, 1151, 9056, 1154, 9074, 1167, 9087, 1173, 9098, 1181, 9116, 1188, 9137, 1200, 9158, 1212, 9175, 1213, 9201, 1215, 9235, 1221, 10240, 1218, 10242, 822)
 
-[node name="Sonic" parent="." instance=ExtResource("2_6iamk")]
+[node name="Sonic" parent="." unique_id=75592537 instance=ExtResource("2_6iamk")]
 position = Vector2(68, 941)
 
-[node name="Hud" parent="." instance=ExtResource("3_nsrm0")]
+[node name="Hud" parent="." unique_id=753447085 instance=ExtResource("3_nsrm0")]
 
-[node name="Objects" type="Node2D" parent="."]
+[node name="Objects" type="Node2D" parent="." unique_id=1426938006]
 
-[node name="Ring" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring" parent="Objects" unique_id=999473953 instance=ExtResource("4_s8va5")]
 position = Vector2(325, 865)
 
-[node name="Ring2" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring2" parent="Objects" unique_id=1832156250 instance=ExtResource("4_s8va5")]
 position = Vector2(349, 864)
 
-[node name="Ring3" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring3" parent="Objects" unique_id=1798566915 instance=ExtResource("4_s8va5")]
 position = Vector2(371, 864)
 
-[node name="Ring4" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring4" parent="Objects" unique_id=1793879160 instance=ExtResource("4_s8va5")]
 position = Vector2(1134, 799)
 
-[node name="Ring5" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring5" parent="Objects" unique_id=980153520 instance=ExtResource("4_s8va5")]
 position = Vector2(1154, 798)
 
-[node name="Ring6" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring6" parent="Objects" unique_id=316394986 instance=ExtResource("4_s8va5")]
 position = Vector2(1179, 799)
 
-[node name="Ring7" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring7" parent="Objects" unique_id=131614932 instance=ExtResource("4_s8va5")]
 position = Vector2(1202, 800)
 
-[node name="Ring8" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring8" parent="Objects" unique_id=1279246358 instance=ExtResource("4_s8va5")]
 position = Vector2(1225, 799)
 
-[node name="Ring9" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring9" parent="Objects" unique_id=562072566 instance=ExtResource("4_s8va5")]
 position = Vector2(1667, 901)
 
-[node name="Ring10" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring10" parent="Objects" unique_id=927901444 instance=ExtResource("4_s8va5")]
 position = Vector2(1695, 920)
 
-[node name="Ring11" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring11" parent="Objects" unique_id=1015983498 instance=ExtResource("4_s8va5")]
 position = Vector2(1730, 933)
 
-[node name="Ring12" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring12" parent="Objects" unique_id=432763650 instance=ExtResource("4_s8va5")]
 position = Vector2(1760, 943)
 
-[node name="Ring13" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring13" parent="Objects" unique_id=1107427948 instance=ExtResource("4_s8va5")]
 position = Vector2(1799, 945)
 
-[node name="Ring14" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring14" parent="Objects" unique_id=1851416725 instance=ExtResource("4_s8va5")]
 position = Vector2(1844, 945)
 
-[node name="Ring15" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring15" parent="Objects" unique_id=1323152799 instance=ExtResource("4_s8va5")]
 position = Vector2(1884, 912)
 
-[node name="Ring16" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring16" parent="Objects" unique_id=113594944 instance=ExtResource("4_s8va5")]
 position = Vector2(2498, 703)
 
-[node name="Ring17" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring17" parent="Objects" unique_id=1728505666 instance=ExtResource("4_s8va5")]
 position = Vector2(2526, 704)
 
-[node name="Ring18" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring18" parent="Objects" unique_id=1973910148 instance=ExtResource("4_s8va5")]
 position = Vector2(2967, 718)
 
-[node name="Ring19" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring19" parent="Objects" unique_id=1876893829 instance=ExtResource("4_s8va5")]
 position = Vector2(2987, 719)
 
-[node name="Ring20" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring20" parent="Objects" unique_id=1824689851 instance=ExtResource("4_s8va5")]
 position = Vector2(3411, 694)
 
-[node name="Ring21" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring21" parent="Objects" unique_id=1238894676 instance=ExtResource("4_s8va5")]
 position = Vector2(3440, 680)
 
-[node name="Ring22" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring22" parent="Objects" unique_id=1819784000 instance=ExtResource("4_s8va5")]
 position = Vector2(3472, 661)
 
-[node name="Ring23" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring23" parent="Objects" unique_id=352118162 instance=ExtResource("4_s8va5")]
 position = Vector2(3511, 646)
 
-[node name="Ring24" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring24" parent="Objects" unique_id=846837897 instance=ExtResource("4_s8va5")]
 position = Vector2(3544, 631)
 
-[node name="Ring25" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring25" parent="Objects" unique_id=318173958 instance=ExtResource("4_s8va5")]
 position = Vector2(3762, 529)
 
-[node name="Ring26" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring26" parent="Objects" unique_id=588147380 instance=ExtResource("4_s8va5")]
 position = Vector2(3794, 524)
 
-[node name="Ring27" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring27" parent="Objects" unique_id=360246212 instance=ExtResource("4_s8va5")]
 position = Vector2(3828, 517)
 
-[node name="Ring28" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring28" parent="Objects" unique_id=1892410462 instance=ExtResource("4_s8va5")]
 position = Vector2(3867, 517)
 
-[node name="Ring29" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring29" parent="Objects" unique_id=1018568740 instance=ExtResource("4_s8va5")]
 position = Vector2(3902, 520)
 
-[node name="Ring30" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring30" parent="Objects" unique_id=694891565 instance=ExtResource("4_s8va5")]
 position = Vector2(3945, 520)
 
-[node name="Ring31" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring31" parent="Objects" unique_id=1567222467 instance=ExtResource("4_s8va5")]
 position = Vector2(4696, 575)
 
-[node name="Ring32" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring32" parent="Objects" unique_id=1992585521 instance=ExtResource("4_s8va5")]
 position = Vector2(4733, 584)
 
-[node name="Ring33" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring33" parent="Objects" unique_id=1828442799 instance=ExtResource("4_s8va5")]
 position = Vector2(4768, 599)
 
-[node name="Ring34" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring34" parent="Objects" unique_id=749989391 instance=ExtResource("4_s8va5")]
 position = Vector2(4803, 617)
 
-[node name="Ring35" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring35" parent="Objects" unique_id=520021423 instance=ExtResource("4_s8va5")]
 position = Vector2(4840, 625)
 
-[node name="Ring36" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring36" parent="Objects" unique_id=1899932884 instance=ExtResource("4_s8va5")]
 position = Vector2(5575, 607)
 
-[node name="Ring37" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring37" parent="Objects" unique_id=515397730 instance=ExtResource("4_s8va5")]
 position = Vector2(5553, 559)
 
-[node name="Ring38" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring38" parent="Objects" unique_id=986701455 instance=ExtResource("4_s8va5")]
 position = Vector2(5501, 539)
 
-[node name="Ring39" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring39" parent="Objects" unique_id=1686096890 instance=ExtResource("4_s8va5")]
 position = Vector2(5456, 556)
 
-[node name="Ring40" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring40" parent="Objects" unique_id=29731314 instance=ExtResource("4_s8va5")]
 position = Vector2(5437, 606)
 
-[node name="Ring41" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring41" parent="Objects" unique_id=1709180772 instance=ExtResource("4_s8va5")]
 position = Vector2(6482, 879)
 
-[node name="Ring42" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring42" parent="Objects" unique_id=1827096626 instance=ExtResource("4_s8va5")]
 position = Vector2(6501, 878)
 
-[node name="Ring43" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring43" parent="Objects" unique_id=11020896 instance=ExtResource("4_s8va5")]
 position = Vector2(6551, 878)
 
-[node name="Ring44" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring44" parent="Objects" unique_id=41063988 instance=ExtResource("4_s8va5")]
 position = Vector2(6574, 879)
 
-[node name="Ring45" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring45" parent="Objects" unique_id=1244695945 instance=ExtResource("4_s8va5")]
 position = Vector2(8037, 1151)
 
-[node name="Ring46" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring46" parent="Objects" unique_id=1398210940 instance=ExtResource("4_s8va5")]
 position = Vector2(8060, 1149)
 
-[node name="Ring47" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring47" parent="Objects" unique_id=2022808684 instance=ExtResource("4_s8va5")]
 position = Vector2(8081, 1151)
 
-[node name="Ring48" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring48" parent="Objects" unique_id=1846942038 instance=ExtResource("4_s8va5")]
 position = Vector2(8105, 1151)
 
-[node name="Ring49" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring49" parent="Objects" unique_id=295222936 instance=ExtResource("4_s8va5")]
 position = Vector2(8126, 1153)
 
-[node name="Ring50" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring50" parent="Objects" unique_id=362380962 instance=ExtResource("4_s8va5")]
 position = Vector2(8152, 1153)
 
-[node name="Spring" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring" parent="Objects" unique_id=2053118904 instance=ExtResource("5_dga24")]
 position = Vector2(1851, 951)
 
-[node name="Spring2" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring2" parent="Objects" unique_id=1763417062 instance=ExtResource("5_dga24")]
 position = Vector2(2161, 895)
 
-[node name="Spring3" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring3" parent="Objects" unique_id=313768843 instance=ExtResource("5_dga24")]
 position = Vector2(2220, 863)
 
-[node name="Spring4" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring4" parent="Objects" unique_id=170316399 instance=ExtResource("5_dga24")]
 position = Vector2(2349, 834)
 
-[node name="Spring5" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring5" parent="Objects" unique_id=2091273310 instance=ExtResource("5_dga24")]
 position = Vector2(3020, 785)
 
-[node name="Spring6" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring6" parent="Objects" unique_id=776675589 instance=ExtResource("5_dga24")]
 position = Vector2(3505, 888)
 
-[node name="Spring7" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring7" parent="Objects" unique_id=301025664 instance=ExtResource("5_dga24")]
 position = Vector2(3625, 632)
 
-[node name="Spring8" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring8" parent="Objects" unique_id=1554451067 instance=ExtResource("5_dga24")]
 position = Vector2(3969, 958)
 
-[node name="Spring9" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring9" parent="Objects" unique_id=346968565 instance=ExtResource("5_dga24")]
 position = Vector2(4427, 899)
 
-[node name="Spring10" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring10" parent="Objects" unique_id=1088739961 instance=ExtResource("5_dga24")]
 position = Vector2(4525, 892)
 
-[node name="Spring11" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring11" parent="Objects" unique_id=1891605564 instance=ExtResource("5_dga24")]
 position = Vector2(4626, 895)
 
-[node name="Spring12" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring12" parent="Objects" unique_id=529398953 instance=ExtResource("5_dga24")]
 position = Vector2(4756, 866)
 
-[node name="Spring13" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring13" parent="Objects" unique_id=203873122 instance=ExtResource("5_dga24")]
 position = Vector2(4906, 828)
 
-[node name="Spring14" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring14" parent="Objects" unique_id=1350566664 instance=ExtResource("5_dga24")]
 position = Vector2(5287, 828)
 
-[node name="Spring15" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring15" parent="Objects" unique_id=151742040 instance=ExtResource("5_dga24")]
 position = Vector2(4155, 652)
 
-[node name="Spring16" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring16" parent="Objects" unique_id=106276884 instance=ExtResource("5_dga24")]
 position = Vector2(4460, 637)
 
-[node name="Spring17" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring17" parent="Objects" unique_id=1036810376 instance=ExtResource("5_dga24")]
 position = Vector2(7204, 1211)
 
-[node name="Spring18" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring18" parent="Objects" unique_id=269529284 instance=ExtResource("5_dga24")]
 position = Vector2(8524, 1218)
 
-[node name="Spring19" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring19" parent="Objects" unique_id=826631307 instance=ExtResource("5_dga24")]
 position = Vector2(8629, 1187)
 
-[node name="Spring20" parent="Objects" instance=ExtResource("5_dga24")]
+[node name="Spring20" parent="Objects" unique_id=918200330 instance=ExtResource("5_dga24")]
 position = Vector2(9550, 1222)
 
-[node name="Enemy" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy" parent="Objects" unique_id=1349415769 instance=ExtResource("6_qxy0u")]
 position = Vector2(827, 941)
 
-[node name="Enemy2" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy2" parent="Objects" unique_id=969355581 instance=ExtResource("6_qxy0u")]
 position = Vector2(1051, 822)
 
-[node name="Enemy3" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy3" parent="Objects" unique_id=742395211 instance=ExtResource("6_qxy0u")]
 position = Vector2(2218, 862)
 
-[node name="Enemy4" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy4" parent="Objects" unique_id=127918646 instance=ExtResource("6_qxy0u")]
 position = Vector2(2392, 773)
 
-[node name="Enemy5" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy5" parent="Objects" unique_id=1874374260 instance=ExtResource("6_qxy0u")]
 position = Vector2(3147, 832)
 
-[node name="Enemy6" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy6" parent="Objects" unique_id=997313738 instance=ExtResource("6_qxy0u")]
 position = Vector2(3391, 615)
 
-[node name="Enemy7" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy7" parent="Objects" unique_id=1048667667 instance=ExtResource("6_qxy0u")]
 position = Vector2(3538, 624)
 
-[node name="Enemy8" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy8" parent="Objects" unique_id=2024228500 instance=ExtResource("6_qxy0u")]
 position = Vector2(4114, 946)
 
-[node name="Enemy9" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy9" parent="Objects" unique_id=1304498908 instance=ExtResource("6_qxy0u")]
 position = Vector2(4375, 881)
 
-[node name="Enemy10" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy10" parent="Objects" unique_id=952772415 instance=ExtResource("6_qxy0u")]
 position = Vector2(4356, 625)
 
-[node name="Enemy11" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy11" parent="Objects" unique_id=15113264 instance=ExtResource("6_qxy0u")]
 position = Vector2(4895, 631)
 
-[node name="Enemy12" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy12" parent="Objects" unique_id=597744236 instance=ExtResource("6_qxy0u")]
 position = Vector2(5196, 767)
 
-[node name="Enemy13" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy13" parent="Objects" unique_id=1105133131 instance=ExtResource("6_qxy0u")]
 position = Vector2(5915, 634)
 
-[node name="Enemy14" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy14" parent="Objects" unique_id=857451570 instance=ExtResource("6_qxy0u")]
 position = Vector2(6609, 886)
 
-[node name="Enemy15" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy15" parent="Objects" unique_id=1172011806 instance=ExtResource("6_qxy0u")]
 position = Vector2(7592, 1141)
 
-[node name="Enemy16" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy16" parent="Objects" unique_id=1550761371 instance=ExtResource("6_qxy0u")]
 position = Vector2(8135, 1200)
 
-[node name="Enemy17" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy17" parent="Objects" unique_id=69315266 instance=ExtResource("6_qxy0u")]
 position = Vector2(8582, 1163)
 
-[node name="Enemy18" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy18" parent="Objects" unique_id=2005593 instance=ExtResource("6_qxy0u")]
 position = Vector2(9476, 1204)
 
-[node name="Goal" parent="Objects" instance=ExtResource("7_excbq")]
+[node name="Goal" parent="Objects" unique_id=1850843621 instance=ExtResource("7_excbq")]
 position = Vector2(9635, 1211)
 
-[node name="Spike" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike" parent="Objects" unique_id=1057131177 instance=ExtResource("8_iav0o")]
 position = Vector2(3397, 895.00006)
 scale = Vector2(3, 3)
 
-[node name="Spike2" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike2" parent="Objects" unique_id=235861055 instance=ExtResource("8_iav0o")]
 position = Vector2(3431, 895.00006)
 scale = Vector2(3, 3)
 
-[node name="Spike3" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike3" parent="Objects" unique_id=1800178088 instance=ExtResource("8_iav0o")]
 position = Vector2(3558, 882)
 scale = Vector2(2, 2)
 
-[node name="Spike4" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike4" parent="Objects" unique_id=882669250 instance=ExtResource("8_iav0o")]
 position = Vector2(3923, 948.00006)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike5" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike5" parent="Objects" unique_id=1452158906 instance=ExtResource("8_iav0o")]
 position = Vector2(4016.0002, 950.00006)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike6" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike6" parent="Objects" unique_id=1602664939 instance=ExtResource("8_iav0o")]
 position = Vector2(4466, 882)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike7" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike7" parent="Objects" unique_id=569985359 instance=ExtResource("8_iav0o")]
 position = Vector2(4571, 871)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike8" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike8" parent="Objects" unique_id=728432626 instance=ExtResource("8_iav0o")]
 position = Vector2(4670, 872)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike9" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike9" parent="Objects" unique_id=1177230403 instance=ExtResource("8_iav0o")]
 position = Vector2(5329, 819.00006)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike10" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike10" parent="Objects" unique_id=352935674 instance=ExtResource("8_iav0o")]
 position = Vector2(5374, 812)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike11" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike11" parent="Objects" unique_id=310746652 instance=ExtResource("8_iav0o")]
 position = Vector2(5420, 812.00006)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike12" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike12" parent="Objects" unique_id=1878795495 instance=ExtResource("8_iav0o")]
 position = Vector2(7709.0005, 1199)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike13" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike13" parent="Objects" unique_id=546422671 instance=ExtResource("8_iav0o")]
 position = Vector2(8217, 1194)
 scale = Vector2(1.5, 1.5)
