@@ -1,0 +1,57 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://di5m2ls72yjep"]
+
+[ext_resource type="Texture2D" uid="uid://cttkcmphdqvyf" path="res://assets/sprites/sonic/Frenar.png" id="1_mi7ne"]
+[ext_resource type="Texture2D" uid="uid://dcilagox3lpjx" path="res://assets/sprites/sonic/Idle.png" id="2_4u1lb"]
+[ext_resource type="Texture2D" uid="uid://cv12lwjbcaewx" path="res://assets/sprites/sonic/Saltar.png" id="3_ylvkb"]
+[ext_resource type="Texture2D" uid="uid://s8k3cdfmp1f4" path="res://assets/sprites/sonic/Caminar.png" id="4_rgfa2"]
+[ext_resource type="Texture2D" uid="uid://bh35pjp7fd05v" path="res://assets/sprites/sonic/Correr1.png" id="5_vbg8m"]
+[ext_resource type="Texture2D" uid="uid://c8akiflveqpuv" path="res://assets/sprites/sonic/Correr2.png" id="6_yxwif"]
+[ext_resource type="Texture2D" uid="uid://bagwv5pk2fmpb" path="res://assets/sprites/sonic/Correr3.png" id="7_f6b7s"]
+[ext_resource type="Texture2D" uid="uid://rqirk4rf30uq" path="res://assets/sprites/sonic/Correr4.png" id="8_dmapo"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rgfa2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vbg8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yxwif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f6b7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dmapo")
+}],
+"loop": true,
+"name": &"correr",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mi7ne")
+}],
+"loop": true,
+"name": &"frenar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4u1lb")
+}],
+"loop": true,
+"name": &"quieto",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ylvkb")
+}],
+"loop": true,
+"name": &"saltar",
+"speed": 5.0
+}]

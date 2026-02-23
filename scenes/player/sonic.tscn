@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://de2ka5vj0kd7k"]
+
+[ext_resource type="Script" uid="uid://byixpxovmhs3i" path="res://scipts/player.gd" id="1_3uflu"]
+[ext_resource type="SpriteFrames" uid="uid://di5m2ls72yjep" path="res://resources/sonic_animations.tres" id="2_25jbh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3uflu"]
+size = Vector2(32, 32)
+
+[node name="Sonic" type="CharacterBody2D" unique_id=1587316039]
+script = ExtResource("1_3uflu")
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=2008222128]
+shape = SubResource("RectangleShape2D_3uflu")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=637298920]
+limit_left = 0
+limit_top = 0
+limit_right = 10240
+limit_bottom = 1280
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2132483446]
+sprite_frames = ExtResource("2_25jbh")
+animation = &"correr"

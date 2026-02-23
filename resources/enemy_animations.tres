@@ -1,0 +1,31 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://b4llxb3drdblr"]
+
+[ext_resource type="Texture2D" uid="uid://c5wqkf2q75hsr" path="res://assets/sprites/mosca1-invetida-removebg-preview.png" id="1_f1klh"]
+[ext_resource type="Texture2D" uid="uid://b6ub5pdhjff8n" path="res://assets/sprites/mosca2-invertida-removebg-preview.png" id="2_jyuex"]
+[ext_resource type="Texture2D" uid="uid://bnyderxms3l63" path="res://assets/sprites/mosca1.png" id="3_iud0f"]
+[ext_resource type="Texture2D" uid="uid://dqdlu1d0gcwin" path="res://assets/sprites/mosca2.png" id="4_q44qy"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_f1klh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jyuex")
+}],
+"loop": true,
+"name": &"alante",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_iud0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q44qy")
+}],
+"loop": true,
+"name": &"atras",
+"speed": 5.0
+}]
