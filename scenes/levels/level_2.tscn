@@ -1,8 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4u31ttyw1gk4"]
+[gd_scene load_steps=12 format=3 uid="uid://b4u31ttyw1gk4"]
 
 [ext_resource type="Texture2D" uid="uid://16idk3dlx4we" path="res://assets/sprites/Level2.png" id="1_ibugp"]
+[ext_resource type="PackedScene" uid="uid://dj3qcnfcsuq4d" path="res://scenes/objects/OneWayPlatform.tscn" id="2_3p04p"]
 [ext_resource type="PackedScene" uid="uid://de2ka5vj0kd7k" path="res://scenes/player/sonic.tscn" id="2_8qukl"]
+[ext_resource type="PackedScene" uid="uid://vfj2abcjqkcu" path="res://scenes/objects/SwingingPlatform.tscn" id="2_nt80m"]
 [ext_resource type="PackedScene" uid="uid://j5ujxb7icetc" path="res://scenes/ui/hud.tscn" id="3_3p04p"]
+[ext_resource type="Texture2D" uid="uid://bf61fksdxes0e" path="res://assets/sprites/Pared.png" id="3_qsp8v"]
 [ext_resource type="PackedScene" uid="uid://dxgbdlbysqojc" path="res://scenes/objects/ring.tscn" id="4_qsp8v"]
 [ext_resource type="PackedScene" uid="uid://dqvuedkgdc0mo" path="res://scenes/objects/enemy.tscn" id="5_nt80m"]
 [ext_resource type="PackedScene" uid="uid://g6b1ot6kxx8j" path="res://scenes/objects/goal.tscn" id="6_brxtv"]
@@ -29,6 +32,42 @@ polygon = PackedVector2Array(-3, 272, 70, 269, 111, 270, 143, 266, 171, 268, 222
 polygon = PackedVector2Array(4, 700, 29, 702, 65, 709, 103, 707, 170, 707, 213, 707, 297, 704, 366, 705, 576, 701, 264, 768)
 
 [node name="Collision3" type="CollisionPolygon2D" parent="Platforms/GroundMain"]
+polygon = PackedVector2Array(791, 702, 821, 705, 855, 712, 892, 705, 919, 705, 949, 705, 984, 707, 1030, 705, 1050, 703, 1052, 744, 1055, 787, 1087, 787, 1112, 787, 1153, 787, 1181, 790, 1183, 836, 1216, 836, 1243, 834, 1278, 834, 1303, 836, 1335, 834, 1363, 833, 1374, 888, 791, 888)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platforms/GroundMain"]
+polygon = PackedVector2Array(1150, 705, 1208, 703, 1206, 726)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Platforms/GroundMain"]
+polygon = PackedVector2Array(1688, 859, 1752, 858, 1752, 875, 1695, 882)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Platforms/GroundMain"]
+polygon = PackedVector2Array(1823, 889, 1879, 888, 1879, 911, 1828, 914)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Platforms/GroundMain"]
+polygon = PackedVector2Array(1947, 921, 2007, 918, 2010, 946, 1959, 943)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Platforms/GroundMain"]
+polygon = PackedVector2Array(2079, 957, 2158, 962, 2213, 964, 2314, 964, 2424, 962, 2543, 960, 2647, 962, 2732, 962, 2856, 964, 2936, 964, 2938, 928, 3030, 930, 3037, 900, 3145, 896, 3210, 904, 3267, 902, 3316, 896, 3362, 896, 3403, 898, 3446, 900, 3453, 865, 3511, 868, 3518, 831, 3680, 836, 3665, 1010, 2068, 1035)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Platforms/GroundMain"]
+polygon = PackedVector2Array(1305, 704, 1816, 710, 1822, 645, 1939, 647, 2148, 642, 2292, 706, 2368, 708, 2427, 682, 2444, 612, 2444, 530, 2965, 530, 2981, 661, 3026, 700, 3084, 712, 3193, 710, 3357, 706, 3416, 708, 3410, 745, 2930, 747, 2323, 760, 1855, 751)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Platforms/GroundMain"]
+polygon = PackedVector2Array(2341, 453, 2343, 597, 2363, 600, 2363, 454)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Platforms/GroundMain"]
+polygon = PackedVector2Array(3893, 707, 3933, 699, 3959, 681, 3976, 639, 4056, 645, 4110, 642, 4143, 642, 4188, 639, 4190, 767, 4253, 771, 4253, 645, 4313, 639, 4315, 773, 4382, 769, 4382, 641, 4503, 644, 4508, 767, 4571, 770, 4572, 644, 4636, 644, 4636, 767, 4697, 769, 4700, 642, 4758, 642, 4766, 768, 4830, 770, 4831, 643, 4953, 642, 4959, 774, 5020, 767, 5022, 643, 5082, 642, 5085, 767, 5148, 769, 5150, 708, 5436, 708, 5432, 800, 3895, 787)
+
+[node name="SwingingPlatform" parent="Platforms/GroundMain" instance=ExtResource("2_nt80m")]
+position = Vector2(1513, 768)
+
+[node name="OneWayPlatform" parent="Platforms" instance=ExtResource("2_3p04p")]
+position = Vector2(3644, 717)
+
+[node name="Pared" type="Sprite2D" parent="Platforms"]
+position = Vector2(2353.5, 527)
+scale = Vector2(0.65625, 1)
+texture = ExtResource("3_qsp8v")
 
 [node name="Sonic" parent="." instance=ExtResource("2_8qukl")]
 position = Vector2(79, 236)
