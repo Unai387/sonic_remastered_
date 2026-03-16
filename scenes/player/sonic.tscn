@@ -19,5 +19,6 @@ limit_right = 10240
 limit_bottom = 100000000
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
 sprite_frames = ExtResource("2_25jbh")
 animation = &"correr"

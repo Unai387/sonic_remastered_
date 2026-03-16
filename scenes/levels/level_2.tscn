@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b4u31ttyw1gk4"]
+[gd_scene load_steps=13 format=3 uid="uid://b4u31ttyw1gk4"]
 
 [ext_resource type="Texture2D" uid="uid://16idk3dlx4we" path="res://assets/sprites/Level2.png" id="1_ibugp"]
 [ext_resource type="PackedScene" uid="uid://dj3qcnfcsuq4d" path="res://scenes/objects/OneWayPlatform.tscn" id="2_3p04p"]
@@ -11,6 +11,12 @@
 [ext_resource type="PackedScene" uid="uid://g6b1ot6kxx8j" path="res://scenes/objects/goal.tscn" id="6_brxtv"]
 [ext_resource type="PackedScene" uid="uid://cuc2cwnxphyqb" path="res://scenes/objects/spike.tscn" id="7_tv7cl"]
 [ext_resource type="AudioStream" uid="uid://dpeejhqs1p357" path="res://assets/audio/Musica.mp3" id="8_8qukl"]
+
+[sub_resource type="Curve2D" id="Curve2D_nt80m"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 7199, 641, 0, 0, 0, 0, 7237, 641, 0, 0, 0, 0, 7268, 647, 0, 0, 0, 0, 7287, 663, 0, 0, 0, 0, 7307, 695, 0, 0, 0, 0, 7303, 711, 0, 0, 0, 0, 7294, 732, 0, 0, 0, 0, 7276, 751, 0, 0, 0, 0, 7268, 778, 0, 0, 0, 0, 7264, 815, 0, 0, 0, 0, 7268, 836, 0, 0, 0, 0, 7291, 874, 0, 0, 0, 0, 7321, 889, 0, 0, 0, 0, 7349, 897, 0, 0, 0, 0, 7377, 900, 0, 0, 0, 0, 7408, 898, 0, 0, 0, 0, 7424, 898, 0, 0, 0, 0, 7237, 944, 0, 0, 0, 0, 7199, 641)
+}
+point_count = 19
 
 [node name="Level2" type="Node2D"]
 position = Vector2(2, 0)
@@ -58,11 +64,32 @@ polygon = PackedVector2Array(2341, 453, 2343, 597, 2363, 600, 2363, 454)
 [node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Platforms/GroundMain"]
 polygon = PackedVector2Array(3893, 707, 3933, 699, 3959, 681, 3976, 639, 4056, 645, 4110, 642, 4143, 642, 4188, 639, 4190, 767, 4253, 771, 4253, 645, 4313, 639, 4315, 773, 4382, 769, 4382, 641, 4503, 644, 4508, 767, 4571, 770, 4572, 644, 4636, 644, 4636, 767, 4697, 769, 4700, 642, 4758, 642, 4766, 768, 4830, 770, 4831, 643, 4953, 642, 4959, 774, 5020, 767, 5022, 643, 5082, 642, 5085, 767, 5148, 769, 5150, 708, 5436, 708, 5432, 800, 3895, 787)
 
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Platforms/GroundMain"]
+polygon = PackedVector2Array(5436, 707, 5514, 678, 5558, 650, 5608, 636, 5648, 638, 5687, 638, 5749, 639, 5748, 611, 5818, 609, 5818, 574, 5978, 583, 5983, 530, 6228, 531, 5948, 724, 5530, 753)
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Platforms/GroundMain"]
+polygon = PackedVector2Array(6246, 535, 6393, 530, 6549, 528, 6547, 564, 6559, 649, 6590, 700, 6180, 670)
+
 [node name="SwingingPlatform" parent="Platforms/GroundMain" instance=ExtResource("2_nt80m")]
 position = Vector2(1513, 768)
 
-[node name="OneWayPlatform" parent="Platforms" instance=ExtResource("2_3p04p")]
-position = Vector2(3644, 717)
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Platforms/GroundMain"]
+polygon = PackedVector2Array(6991, 700, 7026, 686, 7058, 668, 7099, 649, 7131, 641, 7165, 638, 7189, 636, 7218, 641, 7149, 726)
+
+[node name="OneWayPlatform2" parent="Platforms" instance=ExtResource("2_3p04p")]
+position = Vector2(5774, 462)
+scale = Vector2(0.8, 0.8)
+
+[node name="OneWayPlatform5" parent="Platforms" instance=ExtResource("2_3p04p")]
+position = Vector2(3646, 712)
+
+[node name="OneWayPlatform4" parent="Platforms" instance=ExtResource("2_3p04p")]
+position = Vector2(6789, 715)
+scale = Vector2(0.8, 0.8)
+
+[node name="OneWayPlatform3" parent="Platforms" instance=ExtResource("2_3p04p")]
+position = Vector2(5780, 357)
+scale = Vector2(0.4, 0.4)
 
 [node name="Pared" type="Sprite2D" parent="Platforms"]
 position = Vector2(2353.5, 527)
@@ -70,7 +97,7 @@ scale = Vector2(0.65625, 1)
 texture = ExtResource("3_qsp8v")
 
 [node name="Sonic" parent="." instance=ExtResource("2_8qukl")]
-position = Vector2(79, 236)
+position = Vector2(98, 237)
 
 [node name="Hud" parent="." instance=ExtResource("3_3p04p")]
 
@@ -323,3 +350,6 @@ scale = Vector2(1.5, 1.5)
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_8qukl")
 autoplay = true
+
+[node name="STunnel" type="Path2D" parent="."]
+curve = SubResource("Curve2D_nt80m")
