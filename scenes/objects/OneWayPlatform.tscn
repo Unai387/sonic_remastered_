@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dj3qcnfcsuq4d"]
+
+[ext_resource type="Script" uid="uid://ci54gk7t2dyi2" path="res://scenes/objects/one_way_platform.gd" id="1_tgii0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1c8hd"]
+size = Vector2(200, 20)
+
+[node name="OneWayPlatform" type="AnimatableBody2D" unique_id=559645712]
+script = ExtResource("1_tgii0")
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1098162436]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_1c8hd")

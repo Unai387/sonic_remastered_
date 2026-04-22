@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cv8fvfy3mfhau" path="res://scipts/main_menu.gd" id="1_sl1te"]
 [ext_resource type="Texture2D" uid="uid://chjsr32gmh2k3" path="res://assets/sprites/PortadaMenu.png" id="2_fe2o3"]
+[ext_resource type="AudioStream" uid="uid://dpeejhqs1p357" path="res://assets/audio/Musica.mp3" id="3_1g8jr"]
 
-[node name="MainMenu" type="Control" unique_id=2082635132]
+[node name="MainMenu" type="Control" unique_id=867681702]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,23 +13,32 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sl1te")
 
-[node name="BackGround" type="Sprite2D" parent="." unique_id=226557629]
+[node name="BackGround" type="Sprite2D" parent="." unique_id=1647975015]
 position = Vector2(0, 2)
-scale = Vector2(0.7467448, 0.63183594)
+scale = Vector2(1.2500001, 1.0537109)
 texture = ExtResource("2_fe2o3")
 centered = false
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1268785536]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1718983180]
 layout_mode = 0
-offset_left = 435.0
-offset_top = 528.0
-offset_right = 676.0
-offset_bottom = 631.0
+offset_left = 778.0
+offset_top = 878.0
+offset_right = 1063.0
+offset_bottom = 979.0
 
-[node name="Iniciar" type="Button" parent="VBoxContainer" unique_id=1057483458]
+[node name="Iniciar" type="Button" parent="VBoxContainer" unique_id=1910999555]
 layout_mode = 2
 text = "Iniciar"
 
-[node name="Salir" type="Button" parent="VBoxContainer" unique_id=795256082]
+[node name="Niveles" type="Button" parent="VBoxContainer" unique_id=590748449]
+layout_mode = 2
+text = "Niveles"
+
+[node name="Salir" type="Button" parent="VBoxContainer" unique_id=818564049]
 layout_mode = 2
 text = "Salir"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1725948278]
+stream = ExtResource("3_1g8jr")
+volume_db = -15.0
+autoplay = true

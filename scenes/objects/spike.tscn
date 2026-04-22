@@ -1,19 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuc2cwnxphyqb"]
+[gd_scene format=3 uid="uid://cuc2cwnxphyqb"]
 
 [ext_resource type="Script" uid="uid://bppnl23ngsql8" path="res://scenes/objects/spike.gd" id="1_htn6p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pdvsu"]
-size = Vector2(32, 16)
+size = Vector2(30, 16)
 
-[node name="Spike" type="Area2D"]
+[node name="Spike" type="Area2D" unique_id=1324564061]
 script = ExtResource("1_htn6p")
 
-[node name="Visual" type="ColorRect" parent="."]
-offset_left = -16.0
-offset_top = -8.0
-offset_right = 16.0
-offset_bottom = 8.0
-color = Color(0.32172796, 0.32172796, 0.32172796, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=122931945]
+position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_pdvsu")

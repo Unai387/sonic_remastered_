@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cs86a45bda0di"]
+
+[ext_resource type="Script" uid="uid://x3slu6qgl6eo" path="res://scenes/ui/level_select.gd" id="1_wp86k"]
+[ext_resource type="Texture2D" uid="uid://na4h1dqfk1jp" path="res://assets/sprites/Niveles.png" id="2_wp86k"]
+[ext_resource type="AudioStream" uid="uid://dpeejhqs1p357" path="res://assets/audio/Musica.mp3" id="3_tyiyf"]
+
+[sub_resource type="FontVariation" id="FontVariation_wp86k"]
+
+[node name="LevelSelect" type="Control" unique_id=689227854]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wp86k")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1908825563]
+scale = Vector2(1.250651, 1.0585938)
+texture = ExtResource("2_wp86k")
+centered = false
+
+[node name="ButtonContainer" type="VBoxContainer" parent="." unique_id=949278067]
+layout_mode = 0
+offset_left = 707.0
+offset_top = 512.0
+offset_right = 1155.0
+offset_bottom = 657.0
+
+[node name="Level1Button" type="Button" parent="ButtonContainer" unique_id=1173324079]
+layout_mode = 2
+text = "Nivel 1"
+
+[node name="Level2Button" type="Button" parent="ButtonContainer" unique_id=399311774]
+layout_mode = 2
+text = "Nivel 2"
+
+[node name="Level3Button" type="Button" parent="ButtonContainer" unique_id=961211666]
+layout_mode = 2
+text = "Nivel 3"
+
+[node name="BackButton" type="Button" parent="ButtonContainer" unique_id=800950100]
+layout_mode = 2
+text = "Volver"
+
+[node name="Label" type="Label" parent="." unique_id=1714814385]
+layout_mode = 0
+offset_left = 711.0
+offset_top = 432.0
+offset_right = 1146.0
+offset_bottom = 487.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_wp86k")
+theme_override_font_sizes/font_size = 40
+text = "SELECCIONA UN NIVEL"
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=555953248]
+stream = ExtResource("3_tyiyf")
+volume_db = -15.0
+autoplay = true

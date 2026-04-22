@@ -4,20 +4,23 @@
 [ext_resource type="SpriteFrames" uid="uid://di5m2ls72yjep" path="res://resources/sonic_animations.tres" id="2_25jbh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3uflu"]
-size = Vector2(32, 32)
+size = Vector2(24, 39)
 
-[node name="Sonic" type="CharacterBody2D" unique_id=1587316039]
+[node name="Sonic" type="CharacterBody2D" unique_id=740187572]
+wall_min_slide_angle = 1.5707964
 script = ExtResource("1_3uflu")
 
-[node name="Collision" type="CollisionShape2D" parent="." unique_id=2008222128]
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=960892206]
+position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_3uflu")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=637298920]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1677624009]
+zoom = Vector2(1.5, 1.5)
 limit_left = 0
 limit_top = 0
 limit_right = 10240
-limit_bottom = 1280
+limit_bottom = 100000000
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2132483446]
+[node name="sonic_animations" type="AnimatedSprite2D" parent="." unique_id=366619136]
 sprite_frames = ExtResource("2_25jbh")
-animation = &"correr"
+animation = &"acelerar"

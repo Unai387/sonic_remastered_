@@ -5,9 +5,32 @@
 [ext_resource type="Texture2D" uid="uid://cv12lwjbcaewx" path="res://assets/sprites/sonic/Saltar.png" id="3_ylvkb"]
 [ext_resource type="Texture2D" uid="uid://s8k3cdfmp1f4" path="res://assets/sprites/sonic/Caminar.png" id="4_rgfa2"]
 [ext_resource type="Texture2D" uid="uid://bh35pjp7fd05v" path="res://assets/sprites/sonic/Correr1.png" id="5_vbg8m"]
+[ext_resource type="Texture2D" uid="uid://yt0m3a6t304c" path="res://assets/sprites/sonic/Rueda1.png" id="6_f6b7s"]
 [ext_resource type="Texture2D" uid="uid://c8akiflveqpuv" path="res://assets/sprites/sonic/Correr2.png" id="6_yxwif"]
-[ext_resource type="Texture2D" uid="uid://bagwv5pk2fmpb" path="res://assets/sprites/sonic/Correr3.png" id="7_f6b7s"]
-[ext_resource type="Texture2D" uid="uid://rqirk4rf30uq" path="res://assets/sprites/sonic/Correr4.png" id="8_dmapo"]
+[ext_resource type="Texture2D" uid="uid://cd2712hwgrlxf" path="res://assets/sprites/sonic/Rueda2.png" id="7_dmapo"]
+[ext_resource type="Texture2D" uid="uid://bc4xlijopd5bn" path="res://assets/sprites/sonic/Rueda3.png" id="8_q00ey"]
+[ext_resource type="Texture2D" uid="uid://cfpx1o1qhm23y" path="res://assets/sprites/sonic/Rueda4.png" id="9_2t0j6"]
+[ext_resource type="Texture2D" uid="uid://kr7b0bvhxg2e" path="res://assets/sprites/sonic/Rueda5.png" id="10_rshmc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxwif"]
+atlas = ExtResource("6_f6b7s")
+region = Rect2(0, 0, 59, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6b7s"]
+atlas = ExtResource("7_dmapo")
+region = Rect2(0, 0, 59, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmapo"]
+atlas = ExtResource("8_q00ey")
+region = Rect2(0, 0, 61, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q00ey"]
+atlas = ExtResource("9_2t0j6")
+region = Rect2(0, 0, 59, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2t0j6"]
+atlas = ExtResource("10_rshmc")
+region = Rect2(0, 0, 60, 58)
 
 [resource]
 animations = [{
@@ -20,15 +43,29 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_yxwif")
+}],
+"loop": false,
+"name": &"acelerar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxwif")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_f6b7s")
+"texture": SubResource("AtlasTexture_f6b7s")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_dmapo")
+"texture": SubResource("AtlasTexture_dmapo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q00ey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2t0j6")
 }],
 "loop": true,
-"name": &"correr",
+"name": &"correr_loop",
 "speed": 5.0
 }, {
 "frames": [{

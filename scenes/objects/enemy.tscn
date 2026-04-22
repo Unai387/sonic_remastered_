@@ -1,18 +1,19 @@
-[gd_scene format=3 uid="uid://dqvuedkgdc0mo"]
+[gd_scene load_steps=4 format=3 uid="uid://dqvuedkgdc0mo"]
 
 [ext_resource type="Script" uid="uid://j00vd2q10ath" path="res://scipts/enemy.gd" id="1_ja0ge"]
 [ext_resource type="SpriteFrames" uid="uid://b4llxb3drdblr" path="res://resources/enemy_animations.tres" id="2_lp353"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lp353"]
-size = Vector2(32, 32)
+size = Vector2(62, 37)
 
-[node name="Enemy" type="Area2D" unique_id=1443692023]
+[node name="Enemy" type="Area2D"]
 script = ExtResource("1_ja0ge")
 
-[node name="EnemysSprite" type="AnimatedSprite2D" parent="." unique_id=815171952]
+[node name="EnemysSprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.4, 0.4)
 sprite_frames = ExtResource("2_lp353")
 animation = &"alante"
 
-[node name="Collision" type="CollisionShape2D" parent="." unique_id=90044602]
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 1.5)
 shape = SubResource("RectangleShape2D_lp353")
