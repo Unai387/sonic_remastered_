@@ -23,7 +23,7 @@ func _on_body_entered(body):
 		
 		var anim = sonic_ref.get_node_or_null("sonic_animations")
 		if anim:
-			anim.play("correr_loop")
+			anim.play("loop")
 
 func _process(delta):
 	if en_loop and sonic_ref:
@@ -46,5 +46,5 @@ func finalizar_loop():
 		if anim:
 			anim.rotation = 0
 			# Quitamos el 'has_animation' que daba error
-			anim.play("correr")
+			anim.play("loop")
 		sonic_ref = null

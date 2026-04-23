@@ -1,26 +1,28 @@
-[gd_scene format=3 uid="uid://de2ka5vj0kd7k"]
+[gd_scene load_steps=5 format=3 uid="uid://de2ka5vj0kd7k"]
 
 [ext_resource type="Script" uid="uid://byixpxovmhs3i" path="res://scipts/player.gd" id="1_3uflu"]
 [ext_resource type="SpriteFrames" uid="uid://di5m2ls72yjep" path="res://resources/sonic_animations.tres" id="2_25jbh"]
+[ext_resource type="Script" uid="uid://80tjtmfj5008" path="res://scenes/levels/camera_sonic.gd" id="2_qb1xk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3uflu"]
 size = Vector2(24, 39)
 
-[node name="Sonic" type="CharacterBody2D" unique_id=740187572]
+[node name="Sonic" type="CharacterBody2D"]
 wall_min_slide_angle = 1.5707964
 script = ExtResource("1_3uflu")
 
-[node name="Collision" type="CollisionShape2D" parent="." unique_id=960892206]
+[node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_3uflu")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1677624009]
+[node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
 limit_left = 0
 limit_top = 0
 limit_right = 10240
 limit_bottom = 100000000
+script = ExtResource("2_qb1xk")
 
-[node name="sonic_animations" type="AnimatedSprite2D" parent="." unique_id=366619136]
+[node name="sonic_animations" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("2_25jbh")
-animation = &"acelerar"
+animation = &"loop"

@@ -1,95 +1,81 @@
 extends CharacterBody2D
 
 @export var health = 5
-@export var move_speed = 100.0
-@export var stun_duration = 1.5
+@export var move_speed = 130.0
+@export var attack_speed = 450.0
+@export var follow_range = 600.0
 
+var player = null
 var is_stunned = false
 var is_defeated = false
-var is_appearing = true
-var direction = 1
-var start_position = Vector2.ZERO
+var is_attacking = false
+
+@onready var sprite = $AnimatedSprite
 
 func _ready():
-	start_position = global_position
-	
+	player = get_tree().current_scene.find_child("Sonic", true, false)
 	$HeadHitbox.body_entered.connect(_on_head_hit)
 	$DamageArea.body_entered.connect(_on_damage_player)
-	
-	# Animación de aparición
-	if $AnimatedSprite.sprite_frames != null:
-		$AnimatedSprite.play("appear")
-		await $AnimatedSprite.animation_finished
-	else:
-		await get_tree().create_timer(1.0).timeout
-	
-	is_appearing = false
-	if $AnimatedSprite.sprite_frames != null:
-		$AnimatedSprite.play("idle")
 
 func _physics_process(delta):
-	if is_appearing or is_stunned or is_defeated:
-		velocity.x = 0
-	else:
-		# Movimiento de patrulla
-		velocity.x = direction * move_speed
-		
-		# Cambiar dirección al alejarse mucho del punto inicial
-		if abs(global_position.x - start_position.x) > 200:
-			direction *= -1
-				
-	# Gravedad
 	if not is_on_floor():
 		velocity.y += 980 * delta
-	
+		
+	if is_defeated or is_stunned:
+		velocity.x = move_toward(velocity.x, 0, 10)
+	elif not is_attacking:
+		ia_persecucion()
+
 	move_and_slide()
 
+func ia_persecucion():
+	if player:
+		var dist = player.global_position.x - global_position.x
+		if abs(dist) < follow_range:
+			sprite.flip_h = dist > 0
+			if abs(dist) < 180:
+				atacar()
+			else:
+				velocity.x = sign(dist) * move_speed
+				sprite.play("idle")
+		else:
+			velocity.x = 0
+
+func atacar():
+	if is_attacking: return
+	is_attacking = true
+	velocity.x = 0
+	await get_tree().create_timer(0.4).timeout
+	
+	if not is_defeated and not is_stunned:
+		var dir = 1 if sprite.flip_h else -1
+		velocity.x = dir * attack_speed
+		await get_tree().create_timer(0.8).timeout
+	
+	is_attacking = false
+
 func _on_head_hit(body):
-	if body.name == "Sonic" and not is_stunned and not is_defeated and not is_appearing:
-		if body.velocity.y > 0:  # Sonic está cayendo
+	if body.name == "Sonic" and not is_stunned and not is_defeated:
+		if body.velocity.y > 0:
 			take_damage()
-			# Hacer rebotar a Sonic
 			body.velocity.y = -400
 
 func take_damage():
 	health -= 1
-	print("Boss golpeado! Vida restante: ", health)
-	
-	if health <= 0:
-		defeat()
-	else:
-		stun()
-
-func stun():
 	is_stunned = true
-	if $AnimatedSprite.sprite_frames != null:
-		$AnimatedSprite.play("stunned")
-	
-	await get_tree().create_timer(stun_duration).timeout
-	
+	sprite.play("stunned")
+	await get_tree().create_timer(1.0).timeout
 	is_stunned = false
-	if $AnimatedSprite.sprite_frames != null and not is_defeated:
-		$AnimatedSprite.play("idle")
+	if health <= 0: defeat()
 
 func defeat():
 	is_defeated = true
-	velocity.x = 0
-	
-	if $AnimatedSprite.sprite_frames != null:
-		$AnimatedSprite.play("defeated")
-		await $AnimatedSprite.animation_finished
-	else:
-		await get_tree().create_timer(2.0).timeout
-	
-	print("¡Boss derrotado!")
-	
-	# Desaparecer
+	sprite.play("defeated")
+	await get_tree().create_timer(4.0).timeout
+	$BodyCollision.set_deferred("disabled", true)
 	queue_free()
-	
-	# Mostrar victoria o siguiente nivel
-	await get_tree().create_timer(1.0).timeout
-	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
 
 func _on_damage_player(body):
-	if body.name == "Sonic" and not is_defeated:
-		body.hit()
+	if body.name == "Sonic" and not is_defeated and not is_stunned:
+		if body.has_method("recibir_dano"):
+			body.recibir_dano()

@@ -7,7 +7,7 @@ func _ready():
 func _on_restart_pressed():
 	get_tree().paused = false
 	queue_free()  # ← AÑADE ESTO (destruir el Game Over)
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
 
 func _on_exit_pressed():
 	get_tree().paused = false

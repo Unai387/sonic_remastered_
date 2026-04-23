@@ -1,28 +1,28 @@
-[gd_scene format=3 uid="uid://bbecfsoqxevb"]
+[gd_scene load_steps=3 format=3 uid="uid://bbecfsoqxevb"]
 
 [ext_resource type="Script" uid="uid://bweurfiycynvb" path="res://scenes/ui/game_over.gd" id="1_kp3qx"]
 [ext_resource type="Texture2D" uid="uid://hrakg51lpbyu" path="res://assets/sprites/GameOver.png" id="2_57v1k"]
 
-[node name="GameOver" type="CanvasLayer" unique_id=1196132476]
+[node name="GameOver" type="CanvasLayer"]
 script = ExtResource("1_kp3qx")
 
-[node name="Background" type="Sprite2D" parent="." unique_id=1732906969]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(960.5, 538.75)
 scale = Vector2(1.8759764, 1.0532227)
 texture = ExtResource("2_57v1k")
 
-[node name="Container" type="VBoxContainer" parent="." unique_id=1078412639]
+[node name="Container" type="VBoxContainer" parent="."]
 offset_left = 234.0
 offset_top = 409.0
 offset_right = 966.0
 offset_bottom = 688.0
 
-[node name="RestartButton" type="Button" parent="Container" unique_id=159058946]
+[node name="RestartButton" type="Button" parent="Container"]
 custom_minimum_size = Vector2(180, 50)
 layout_mode = 2
 text = "RESTART"
 
-[node name="ExitButton" type="Button" parent="Container" unique_id=1652801895]
+[node name="ExitButton" type="Button" parent="Container"]
 custom_minimum_size = Vector2(180, 50)
 layout_mode = 2
 text = "SALIR"

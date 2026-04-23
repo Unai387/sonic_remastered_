@@ -44,5 +44,5 @@ func finalizar():
 		if anim:
 			anim.rotation = 0
 			# Quitamos el 'has_animation' que daba error
-			anim.play("correr") 
+			anim.play("correr_loop") 
 		sonic_ref = null

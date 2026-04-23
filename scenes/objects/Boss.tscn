@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dh0jb0itp3n7n"]
+[gd_scene load_steps=6 format=3 uid="uid://dh0jb0itp3n7n"]
 
 [ext_resource type="Script" uid="uid://b860p7hrnrmnq" path="res://scipts/boss.gd" id="1_iqasm"]
 [ext_resource type="SpriteFrames" uid="uid://bqdopypqt6p50" path="res://resources/boss_animations.tres" id="2_ko25e"]
@@ -12,27 +12,27 @@ radius = 25.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iqasm"]
 size = Vector2(70, 90)
 
-[node name="Boss" type="CharacterBody2D" unique_id=42024772]
+[node name="Boss" type="CharacterBody2D"]
 script = ExtResource("1_iqasm")
 
-[node name="AnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=606770323]
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(1.9999995, -4)
 scale = Vector2(0.07617188, 0.090494804)
 sprite_frames = ExtResource("2_ko25e")
 animation = &"idle"
 
-[node name="BodyCollision" type="CollisionShape2D" parent="." unique_id=1780344412]
+[node name="BodyCollision" type="CollisionShape2D" parent="."]
 position = Vector2(3, -1)
 shape = SubResource("RectangleShape2D_ko25e")
 
-[node name="HeadHitbox" type="Area2D" parent="." unique_id=551491966]
+[node name="HeadHitbox" type="Area2D" parent="."]
 position = Vector2(0, -60)
 
-[node name="HeadCollision" type="CollisionShape2D" parent="HeadHitbox" unique_id=1510802989]
+[node name="HeadCollision" type="CollisionShape2D" parent="HeadHitbox"]
 position = Vector2(-6, 13)
 shape = SubResource("CircleShape2D_2ssrx")
 
-[node name="DamageArea" type="Area2D" parent="." unique_id=2033295443]
+[node name="DamageArea" type="Area2D" parent="."]
 
-[node name="DamageCollision" type="CollisionShape2D" parent="DamageArea" unique_id=573642063]
+[node name="DamageCollision" type="CollisionShape2D" parent="DamageArea"]
 shape = SubResource("RectangleShape2D_iqasm")
