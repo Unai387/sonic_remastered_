@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://j5ujxb7icetc"]
 
 [ext_resource type="Script" uid="uid://bdy5o317p1ity" path="res://scipts/hud.gd" id="1_0mwgc"]
-[ext_resource type="Texture2D" uid="uid://drxqnq7dj8hmg" path="res://assets/sprites/corazon.png" id="2_hqnrr"]
+[ext_resource type="Texture2D" uid="uid://drxqnq7dj8hmg" path="res://assets/sprites/Decoraciones, etc/corazon.png" id="2_hqnrr"]
 
 [node name="Hud" type="CanvasLayer"]
 script = ExtResource("1_0mwgc")

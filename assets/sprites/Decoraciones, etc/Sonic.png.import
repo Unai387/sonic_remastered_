@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xc0rl5qeihan"
-path="res://.godot/imported/Level2.png-7f46fe85ed55dd15317f1fbbfffcdd2a.ctex"
+uid="uid://bqkgxhgx8q6dd"
+path="res://.godot/imported/Sonic.png-99038b5e0f6276bdeddd5c0c43ffe3c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Level2.png"
-dest_files=["res://.godot/imported/Level2.png-7f46fe85ed55dd15317f1fbbfffcdd2a.ctex"]
+source_file="res://assets/sprites/Decoraciones, etc/Sonic.png"
+dest_files=["res://.godot/imported/Sonic.png-99038b5e0f6276bdeddd5c0c43ffe3c1.ctex"]
 
 [params]
 

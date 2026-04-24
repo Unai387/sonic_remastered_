@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqkgxhgx8q6dd"
-path="res://.godot/imported/Sonic.png-34e7cb4f7adc31fdafb73e5f0495f931.ctex"
+uid="uid://bnyderxms3l63"
+path="res://.godot/imported/mosca1.png-2b033d59af1434c137be480c3ab293a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Sonic.png"
-dest_files=["res://.godot/imported/Sonic.png-34e7cb4f7adc31fdafb73e5f0495f931.ctex"]
+source_file="res://assets/sprites/Enemigos/mosca1.png"
+dest_files=["res://.godot/imported/mosca1.png-2b033d59af1434c137be480c3ab293a3.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c126qf12fydf3"
-path="res://.godot/imported/Level1.png-d60134c81e75cfd3f05bf17bc4fc4d8f.ctex"
+uid="uid://dqdlu1d0gcwin"
+path="res://.godot/imported/mosca2.png-a5029ff78d347c25b8e2a3be2fc8d93c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Level1.png"
-dest_files=["res://.godot/imported/Level1.png-d60134c81e75cfd3f05bf17bc4fc4d8f.ctex"]
+source_file="res://assets/sprites/Enemigos/mosca2.png"
+dest_files=["res://.godot/imported/mosca2.png-a5029ff78d347c25b8e2a3be2fc8d93c.ctex"]
 
 [params]
 

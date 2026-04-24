@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvepr78jp7131"
-path="res://.godot/imported/Volandoo.png-eddea1e0f6bf66d68dbc197fde820f62.ctex"
+uid="uid://na4h1dqfk1jp"
+path="res://.godot/imported/Niveles.png-431af336b81e5fadbbb9c2e2ee8dc8c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Volandoo.png"
-dest_files=["res://.godot/imported/Volandoo.png-eddea1e0f6bf66d68dbc197fde820f62.ctex"]
+source_file="res://assets/sprites/Decoraciones, etc/Niveles.png"
+dest_files=["res://.godot/imported/Niveles.png-431af336b81e5fadbbb9c2e2ee8dc8c5.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n7p0851c0hl0"
-path="res://.godot/imported/Anillos1,2,3,.png-1d5fbffda61d1321d25640b4e5e47886.ctex"
+uid="uid://c126qf12fydf3"
+path="res://.godot/imported/Level1.png-505fcd772aa47b3ad759737049d1cb96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Anillos1,2,3,.png"
-dest_files=["res://.godot/imported/Anillos1,2,3,.png-1d5fbffda61d1321d25640b4e5e47886.ctex"]
+source_file="res://assets/sprites/Niveles/Level1.png"
+dest_files=["res://.godot/imported/Level1.png-505fcd772aa47b3ad759737049d1cb96.ctex"]
 
 [params]
 

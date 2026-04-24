@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n82uqjey51v6"
-path="res://.godot/imported/Caminando.png-f2dc6ba25303bd4f468c12ba3d25c410.ctex"
+uid="uid://drxqnq7dj8hmg"
+path="res://.godot/imported/corazon.png-d4b5e6093a7b23bdccbf7ade8d823239.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/sonic/Caminando.png"
-dest_files=["res://.godot/imported/Caminando.png-f2dc6ba25303bd4f468c12ba3d25c410.ctex"]
+source_file="res://assets/sprites/Decoraciones, etc/corazon.png"
+dest_files=["res://.godot/imported/corazon.png-d4b5e6093a7b23bdccbf7ade8d823239.ctex"]
 
 [params]
 

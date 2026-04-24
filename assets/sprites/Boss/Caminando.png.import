@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqdlu1d0gcwin"
-path="res://.godot/imported/mosca2.png-e5d2c8ea465d524e6130f17b4456d1b9.ctex"
+uid="uid://n82uqjey51v6"
+path="res://.godot/imported/Caminando.png-1b2a66fedc2c161e1c0ea9adceb12438.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/mosca2.png"
-dest_files=["res://.godot/imported/mosca2.png-e5d2c8ea465d524e6130f17b4456d1b9.ctex"]
+source_file="res://assets/sprites/Boss/Caminando.png"
+dest_files=["res://.godot/imported/Caminando.png-1b2a66fedc2c161e1c0ea9adceb12438.ctex"]
 
 [params]
 

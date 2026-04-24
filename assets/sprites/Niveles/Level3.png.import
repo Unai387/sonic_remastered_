@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lro0m3bupjjd"
-path="res://.godot/imported/sonic_loop.png-850eed4a44d7fba6e279054da27cff14.ctex"
+uid="uid://bkcgutffijy6e"
+path="res://.godot/imported/Level3.png-86c8b97887a14dc5282e2726f6a65054.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/sonic/sonic_loop.png"
-dest_files=["res://.godot/imported/sonic_loop.png-850eed4a44d7fba6e279054da27cff14.ctex"]
+source_file="res://assets/sprites/Niveles/Level3.png"
+dest_files=["res://.godot/imported/Level3.png-86c8b97887a14dc5282e2726f6a65054.ctex"]
 
 [params]
 

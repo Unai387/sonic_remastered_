@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chjsr32gmh2k3"
-path="res://.godot/imported/PortadaMenu.png-f66e056880b207b5b0675619822f19c2.ctex"
+uid="uid://n7p0851c0hl0"
+path="res://.godot/imported/Anillos1,2,3,.png-3be1b245ebe7ea961e11682e83b8b600.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/PortadaMenu.png"
-dest_files=["res://.godot/imported/PortadaMenu.png-f66e056880b207b5b0675619822f19c2.ctex"]
+source_file="res://assets/sprites/Decoraciones, etc/Anillos1,2,3,.png"
+dest_files=["res://.godot/imported/Anillos1,2,3,.png-3be1b245ebe7ea961e11682e83b8b600.ctex"]
 
 [params]
 

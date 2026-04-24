@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hrakg51lpbyu"
-path="res://.godot/imported/GameOver.png-b3c953f94b6fbbfafda2b3afcf3afd9a.ctex"
+uid="uid://bvepr78jp7131"
+path="res://.godot/imported/Volandoo.png-f41faf891adbf5ac6f3e7ccc7a1ce8cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/GameOver.png"
-dest_files=["res://.godot/imported/GameOver.png-b3c953f94b6fbbfafda2b3afcf3afd9a.ctex"]
+source_file="res://assets/sprites/Boss/Volandoo.png"
+dest_files=["res://.godot/imported/Volandoo.png-f41faf891adbf5ac6f3e7ccc7a1ce8cd.ctex"]
 
 [params]
 

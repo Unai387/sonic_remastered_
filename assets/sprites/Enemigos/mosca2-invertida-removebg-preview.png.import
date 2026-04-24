@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5wqkf2q75hsr"
-path="res://.godot/imported/mosca1-invetida-removebg-preview.png-7226f34af81873fa64c209f8816a9f65.ctex"
+uid="uid://b6ub5pdhjff8n"
+path="res://.godot/imported/mosca2-invertida-removebg-preview.png-3a6bf256da1c94eae774f27b3db187d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/mosca1-invetida-removebg-preview.png"
-dest_files=["res://.godot/imported/mosca1-invetida-removebg-preview.png-7226f34af81873fa64c209f8816a9f65.ctex"]
+source_file="res://assets/sprites/Enemigos/mosca2-invertida-removebg-preview.png"
+dest_files=["res://.godot/imported/mosca2-invertida-removebg-preview.png-3a6bf256da1c94eae774f27b3db187d4.ctex"]
 
 [params]
 

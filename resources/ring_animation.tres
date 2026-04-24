@@ -1,7 +1,7 @@
-[gd_resource type="SpriteFrames" format=3 uid="uid://dkd3jal4ermib"]
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://dkd3jal4ermib"]
 
-[ext_resource type="Texture2D" uid="uid://n7p0851c0hl0" path="res://assets/sprites/Anillos1,2,3,.png" id="1_64edg"]
-[ext_resource type="Texture2D" uid="uid://cfobixsnqa0e6" path="res://assets/sprites/Anillos4,5,6.png" id="2_v5txw"]
+[ext_resource type="Texture2D" uid="uid://n7p0851c0hl0" path="res://assets/sprites/Decoraciones, etc/Anillos1,2,3,.png" id="1_64edg"]
+[ext_resource type="Texture2D" uid="uid://cfobixsnqa0e6" path="res://assets/sprites/Decoraciones, etc/Anillos4,5,6.png" id="2_v5txw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_frukf"]
 atlas = ExtResource("1_64edg")

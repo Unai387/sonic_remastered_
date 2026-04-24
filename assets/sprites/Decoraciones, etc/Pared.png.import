@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6ub5pdhjff8n"
-path="res://.godot/imported/mosca2-invertida-removebg-preview.png-837dce1ccb51414ce25a2b81541fe8e1.ctex"
+uid="uid://bf61fksdxes0e"
+path="res://.godot/imported/Pared.png-ae445f4c462c2b9c4aa9204a4dbaded5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/mosca2-invertida-removebg-preview.png"
-dest_files=["res://.godot/imported/mosca2-invertida-removebg-preview.png-837dce1ccb51414ce25a2b81541fe8e1.ctex"]
+source_file="res://assets/sprites/Decoraciones, etc/Pared.png"
+dest_files=["res://.godot/imported/Pared.png-ae445f4c462c2b9c4aa9204a4dbaded5.ctex"]
 
 [params]
 

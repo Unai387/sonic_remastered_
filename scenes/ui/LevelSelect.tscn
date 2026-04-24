@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cs86a45bda0di"]
+[gd_scene load_steps=0 format=3 uid="uid://cs86a45bda0di"]
 
-[ext_resource type="Script" uid="uid://x3slu6qgl6eo" path="res://scenes/ui/level_select.gd" id="1_wp86k"]
-[ext_resource type="Texture2D" uid="uid://na4h1dqfk1jp" path="res://assets/sprites/Niveles.png" id="2_wp86k"]
+[ext_resource type="Script" uid="uid://x3slu6qgl6eo" path="res://scipts/level_select.gd" id="1_wp86k"]
+[ext_resource type="Texture2D" uid="uid://na4h1dqfk1jp" path="res://assets/sprites/Decoraciones, etc/Niveles.png" id="2_wp86k"]
 [ext_resource type="AudioStream" uid="uid://dpeejhqs1p357" path="res://assets/audio/Musica.mp3" id="3_tyiyf"]
 
 [sub_resource type="FontVariation" id="FontVariation_wp86k"]

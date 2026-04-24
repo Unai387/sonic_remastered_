@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnyderxms3l63"
-path="res://.godot/imported/mosca1.png-4a53f7559d38ee5dbac6fb3f3378a159.ctex"
+uid="uid://chjsr32gmh2k3"
+path="res://.godot/imported/PortadaMenu.png-89dbb181d4fcd2d766e29a1a53088565.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/mosca1.png"
-dest_files=["res://.godot/imported/mosca1.png-4a53f7559d38ee5dbac6fb3f3378a159.ctex"]
+source_file="res://assets/sprites/Decoraciones, etc/PortadaMenu.png"
+dest_files=["res://.godot/imported/PortadaMenu.png-89dbb181d4fcd2d766e29a1a53088565.ctex"]
 
 [params]
 
