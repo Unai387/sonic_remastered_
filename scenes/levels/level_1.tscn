@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bgkjecdq3blya"]
+[gd_scene format=3 uid="uid://bgkjecdq3blya"]
 
 [ext_resource type="Texture2D" uid="uid://c126qf12fydf3" path="res://assets/sprites/Level1.png" id="1_dga24"]
 [ext_resource type="PackedScene" uid="uid://de2ka5vj0kd7k" path="res://scenes/player/sonic.tscn" id="2_6iamk"]
@@ -36,493 +36,493 @@ size = Vector2(27, 41)
 
 [sub_resource type="Curve2D" id="Curve2D_iav0o"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 5412, 707, 0, 0, 0, 0, 5452, 704, 0, 0, 0, 0, 5485, 700, 0, 0, 0, 0, 5526, 684, 0, 0, 0, 0, 5552, 662, 0, 0, 0, 0, 5567, 642, 0, 0, 0, 0, 5577, 619, 0, 0, 0, 0, 5574, 598, 0, 0, 0, 0, 5570, 577, 0, 0, 0, 0, 5562, 561, 0, 0, 0, 0, 5548, 547, 0, 0, 0, 0, 5542, 545, 0, 0, 0, 0, 5530, 541, 0, 0, 0, 0, 5512, 538, 0, 0, 0, 0, 5492, 539, 0, 0, 0, 0, 5475, 539, 0, 0, 0, 0, 5462, 552, 0, 0, 0, 0, 5445, 566, 0, 0, 0, 0, 5433, 586, 0, 0, 0, 0, 5427, 609, 0, 0, 0, 0, 5432, 630, 0, 0, 0, 0, 5443, 652, 0, 0, 0, 0, 5462, 672, 0, 0, 0, 0, 5483, 682)
+"points": PackedVector2Array(0, 0, 0, 0, 5412, 707, 0, 0, 0, 0, 5452, 704, 0, 0, 0, 0, 5485, 700, 0, 0, 0, 0, 5526, 684, 0, 0, 0, 0, 5552, 662, 0, 0, 0, 0, 5567, 642, 0, 0, 0, 0, 5577, 619, 0, 0, 0, 0, 5574, 598, 0, 0, 0, 0, 5570, 577, 0, 0, 0, 0, 5562, 561, 0, 0, 0, 0, 5548, 547, 0, 0, 0, 0, 5542, 545, 0, 0, 0, 0, 5530, 541, 0, 0, 0, 0, 5512, 538, 0, 0, 0, 0, 5492, 539, 0, 0, 0, 0, 5475, 539, 0, 0, 0, 0, 5462, 552, 0, 0, 0, 0, 5445, 566, 0, 0, 0, 0, 5433, 586, 0, 0, 0, 0, 5427, 609, 0, 0, 0, 0, 5432, 630, 0, 0, 0, 0, 5443, 652, 0, 0, 0, 0, 5462, 672, 0, 0, 0, 0, 5493, 692, 0, 0, 0, 0, 5578, 695)
 }
-point_count = 24
+point_count = 25
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_excbq"]
-size = Vector2(27.5, 43.6875)
+size = Vector2(27.5, 184.84375)
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" unique_id=1866983500]
 position = Vector2(2, 0)
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=542718259]
 texture = ExtResource("1_dga24")
 centered = false
 
-[node name="Platforms" type="Node2D" parent="."]
+[node name="Platforms" type="Node2D" parent="." unique_id=1001771466]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Platforms"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms" unique_id=2063535785]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1760967758]
 polygon = PackedVector2Array(1, 963, 852, 969, 965, 900, 1393, 895, 1505, 905, 1580, 893, 1688, 933, 1771, 962, 1823, 960, 1869, 955, 1890, 928, 1908, 898, 2170, 895, 2181, 868, 2250, 871, 2245, 831, 2366, 836, 2365, 789, 2624, 783, 2626, 1019, -2, 1025)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1530557160]
 polygon = PackedVector2Array(2628, 787, 3069, 782, 3072, 699, 3284, 702, 3394, 714, 3136, 910)
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=4989809]
 polygon = PackedVector2Array(3397, 714, 3553, 644, 3645, 644, 3457, 725)
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=173751648]
 polygon = PackedVector2Array(3331, 898, 3653, 895, 3800, 963, 3903, 963, 4056, 966, 4177, 951, 4171, 1020, 3346, 1033)
 
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1203393823]
 polygon = PackedVector2Array(3743, 547, 3813, 530, 3864, 531, 3924, 537, 4030, 528, 3894, 586)
 
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=2026202297]
 polygon = PackedVector2Array(3898, 672, 3954, 669, 3985, 647, 4020, 642, 4065, 640, 4099, 643, 4138, 648, 4190, 657, 4191, 695, 3908, 706)
 
-[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
-polygon = PackedVector2Array(4215, 666, 4280, 642, 4327, 641, 4381, 641, 4425, 641, 4481, 637, 4476, 616, 4543, 606, 4547, 578, 4600, 573, 4600, 659, 4307, 680)
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=2050185888]
+polygon = PackedVector2Array(4215, 666, 4280, 642, 4327, 641, 4381, 641, 4425, 641, 4481, 637, 4476, 616, 4543, 606, 4547, 578, 4594, 575, 4600, 659, 4307, 680)
 
-[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1121653435]
 polygon = PackedVector2Array(4176, 946, 4275, 896, 4331, 893, 4443, 903, 4521, 898, 4574, 891, 4698, 893, 4704, 863, 4771, 872, 4764, 829, 4930, 826, 4900, 1002)
 
-[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=303720957]
 polygon = PackedVector2Array(4929, 828, 4927, 784, 5005, 787, 5113, 785, 5244, 786, 5244, 839)
 
-[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=273406718]
 polygon = PackedVector2Array(5247, 831, 5314, 838, 5365, 828, 5406, 829, 5444, 827, 5422, 871, 5301, 867)
 
-[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
-polygon = PackedVector2Array(4597, 577, 4655, 578, 4687, 577, 4743, 604, 4796, 630, 4876, 642, 4951, 647, 5004, 669, 5076, 707, 4660, 669)
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1322459917]
+polygon = PackedVector2Array(4594, 575, 4648, 582, 4689, 592, 4743, 604, 4796, 630, 4876, 642, 4951, 647, 5004, 669, 5074, 714, 4660, 669)
 
-[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=2102697834]
 polygon = PackedVector2Array(4802, 388, 4928, 385, 4907, 403)
 
-[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=17258450]
 polygon = PackedVector2Array(4994, 387, 5048, 387, 5007, 412)
 
-[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1376168367]
 polygon = PackedVector2Array(5121, 418, 5185, 416, 5157, 443)
 
-[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=613570128]
 polygon = PackedVector2Array(5249, 449, 5310, 444, 5280, 470)
 
-[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
-polygon = PackedVector2Array(5642, 714, 5678, 706, 5730, 682, 5775, 653, 5859, 640, 5989, 648, 6082, 642, 6139, 642, 5880, 763, 5644, 766)
+[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=2108341897]
+polygon = PackedVector2Array(5626, 721, 5678, 706, 5730, 682, 5775, 653, 5859, 640, 5989, 648, 6082, 642, 6139, 642, 5880, 763, 5629, 759)
 
-[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1416145239]
 polygon = PackedVector2Array(5380, 514, 5633, 515, 5476, 548)
 
-[node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D18" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=913830867]
 polygon = PackedVector2Array(5698, 484, 5757, 482, 5720, 516)
 
-[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=2036577265]
 polygon = PackedVector2Array(5827, 446, 5919, 450, 5998, 422, 6058, 382, 6155, 382, 6260, 390, 6340, 380, 6412, 383, 6502, 388, 6641, 385, 6685, 380, 5872, 504)
 
-[node name="CollisionPolygon2D20" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D20" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1703535759]
 polygon = PackedVector2Array(6145, 463, 6145, 587, 6241, 528)
 
-[node name="CollisionPolygon2D23" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D23" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=631780650]
 polygon = PackedVector2Array(4612, 486, 4667, 483, 4636, 500)
 
-[node name="CollisionPolygon2D24" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D24" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=548757165]
 polygon = PackedVector2Array(5633, 348, 5695, 345, 5664, 367)
 
-[node name="CollisionPolygon2D25" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D25" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1603740157]
 polygon = PackedVector2Array(4674, 422, 4736, 418, 4714, 431)
 
-[node name="CollisionPolygon2D26" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D26" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1241247717]
 polygon = PackedVector2Array(5747, 217, 5809, 218, 5781, 239)
 
-[node name="CollisionPolygon2D27" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D27" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1801200265]
 polygon = PackedVector2Array(5923, 159, 5976, 154, 5956, 174)
 
-[node name="CollisionPolygon2D28" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D28" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=11609760]
 polygon = PackedVector2Array(6087, 135, 6974, 126, 6138, 158)
 
-[node name="CollisionPolygon2D29" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D29" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1502574513]
 polygon = PackedVector2Array(6981, 132, 7037, 132, 7010, 149)
 
-[node name="CollisionPolygon2D30" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D30" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1869677429]
 polygon = PackedVector2Array(7040, 195, 7103, 192, 7078, 208)
 
-[node name="CollisionPolygon2D31" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D31" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1998539950]
 polygon = PackedVector2Array(7106, 263, 7156, 258, 7134, 277)
 
-[node name="CollisionPolygon2D32" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D32" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1007148779]
 polygon = PackedVector2Array(7174, 326, 7234, 326, 7197, 345)
 
-[node name="CollisionPolygon2D33" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D33" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=267061899]
 polygon = PackedVector2Array(7237, 389, 7291, 389, 7256, 406)
 
-[node name="CollisionPolygon2D34" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D34" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=712138778]
 polygon = PackedVector2Array(7299, 454, 7358, 452, 7324, 468)
 
-[node name="CollisionPolygon2D35" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D35" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=807299123]
 polygon = PackedVector2Array(7360, 515, 7421, 516, 7383, 535)
 
-[node name="CollisionPolygon2D36" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D36" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1497915624]
 polygon = PackedVector2Array(7459, 516, 7519, 519, 7487, 524)
 
-[node name="CollisionPolygon2D37" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D37" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1689071029]
 polygon = PackedVector2Array(7618, 513, 7678, 510, 7649, 529)
 
-[node name="CollisionPolygon2D40" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D40" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=111929861]
 polygon = PackedVector2Array(6997, 644, 7051, 643, 7028, 658)
 
-[node name="CollisionPolygon2D43" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D43" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1138837284]
 polygon = PackedVector2Array(6906, 1157, 6958, 1159, 6994, 1165, 7028, 1175, 7076, 1203, 7113, 1212, 7136, 1218, 7157, 1220, 7208, 1220, 7247, 1214, 7273, 1191, 7285, 1155, 7375, 1154, 7474, 1160, 7553, 1163, 7650, 1153, 7679, 1151, 7133, 1320, 6946, 1219)
 
-[node name="CollisionPolygon2D44" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D44" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1235909634]
 polygon = PackedVector2Array(7431, 905, 7477, 906, 7508, 906, 7558, 900, 7600, 906, 7659, 903, 7683, 904, 7681, 831, 7749, 838, 7745, 795, 7818, 785, 7864, 786, 7932, 789, 7987, 785, 7714, 911, 7626, 962, 7494, 944)
 
-[node name="CollisionPolygon2D45" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D45" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=720888431]
 polygon = PackedVector2Array(7987, 785, 8029, 785, 8091, 788, 8153, 789, 8229, 789, 8294, 788, 8378, 789, 8113, 833)
 
-[node name="CollisionPolygon2D46" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D46" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1567384417]
 polygon = PackedVector2Array(7676, 1160, 7687, 1218, 7765, 1226, 7884, 1227, 7956, 1225, 8010, 1221, 8067, 1225, 8210, 1218, 8313, 1226, 8369, 1226, 8431, 1222, 8512, 1216, 8543, 1211, 8187, 1321, 7925, 1296, 7624, 1250)
 
-[node name="CollisionPolygon2D47" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D47" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=1280744927]
 polygon = PackedVector2Array(8257, 933, 8282, 927, 8301, 923, 8324, 919, 8358, 901, 8393, 897, 8418, 895, 8452, 896, 8497, 898, 8548, 911, 8577, 926, 8612, 942, 8651, 957, 8705, 969, 8803, 973, 8875, 968, 8940, 960, 9019, 965, 8900, 991, 8745, 999, 8595, 974, 8502, 926, 8421, 933, 8362, 940, 8258, 959)
 
-[node name="CollisionPolygon2D48" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D48" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=782635881]
 polygon = PackedVector2Array(8544, 1213, 8543, 1190, 8595, 1192, 8640, 1187, 8643, 1154, 8879, 1158, 9020, 1154, 9110, 1186, 9160, 1215, 9211, 1224, 9598, 1218, 9756, 1222, 9918, 1215, 10079, 1219, 10238, 1216, 9928, 1389, 9359, 1350, 9100, 1314, 8518, 1310)
 
-[node name="CollisionPolygon2D21" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D21" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=934358485]
 polygon = PackedVector2Array(6386, 904, 6497, 912, 6533, 910, 6570, 906, 6639, 901, 6663, 901, 6666, 943, 6386, 948)
 
-[node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+[node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="Platforms/StaticBody2D" unique_id=357686260]
 polygon = PackedVector2Array(6659, 149, 6658, 154, 6656, 169, 6658, 181, 6665, 203, 6670, 225, 6677, 245, 6678, 257, 6666, 282, 6665, 299, 6667, 315, 6667, 342, 6794, 342, 6852, 397, 6841, 488, 6790, 525, 6803, 564, 6886, 572, 6964, 561, 6961, 141)
 
-[node name="Sonic" parent="." instance=ExtResource("2_6iamk")]
+[node name="Sonic" parent="." unique_id=2054802069 instance=ExtResource("2_6iamk")]
 position = Vector2(5231, 685)
 
-[node name="Hud" parent="." instance=ExtResource("3_nsrm0")]
+[node name="Hud" parent="." unique_id=803914253 instance=ExtResource("3_nsrm0")]
 
-[node name="Objects" type="Node2D" parent="."]
+[node name="Objects" type="Node2D" parent="." unique_id=387648861]
 
-[node name="Ring" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring" parent="Objects" unique_id=1337863555 instance=ExtResource("4_s8va5")]
 position = Vector2(325, 865)
 
-[node name="Ring2" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring2" parent="Objects" unique_id=1362422562 instance=ExtResource("4_s8va5")]
 position = Vector2(349, 864)
 
-[node name="Ring3" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring3" parent="Objects" unique_id=1070403207 instance=ExtResource("4_s8va5")]
 position = Vector2(371, 864)
 
-[node name="Ring4" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring4" parent="Objects" unique_id=594616467 instance=ExtResource("4_s8va5")]
 position = Vector2(1134, 799)
 
-[node name="Ring5" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring5" parent="Objects" unique_id=1184372498 instance=ExtResource("4_s8va5")]
 position = Vector2(1154, 798)
 
-[node name="Ring6" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring6" parent="Objects" unique_id=895982631 instance=ExtResource("4_s8va5")]
 position = Vector2(1179, 799)
 
-[node name="Ring7" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring7" parent="Objects" unique_id=1918443690 instance=ExtResource("4_s8va5")]
 position = Vector2(1202, 800)
 
-[node name="Ring8" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring8" parent="Objects" unique_id=1926764540 instance=ExtResource("4_s8va5")]
 position = Vector2(1225, 799)
 
-[node name="Ring9" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring9" parent="Objects" unique_id=1665538528 instance=ExtResource("4_s8va5")]
 position = Vector2(1667, 901)
 
-[node name="Ring10" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring10" parent="Objects" unique_id=1582003997 instance=ExtResource("4_s8va5")]
 position = Vector2(1695, 920)
 
-[node name="Ring11" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring11" parent="Objects" unique_id=836744104 instance=ExtResource("4_s8va5")]
 position = Vector2(1730, 933)
 
-[node name="Ring12" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring12" parent="Objects" unique_id=2001725849 instance=ExtResource("4_s8va5")]
 position = Vector2(1760, 943)
 
-[node name="Ring13" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring13" parent="Objects" unique_id=1465497589 instance=ExtResource("4_s8va5")]
 position = Vector2(1799, 945)
 
-[node name="Ring14" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring14" parent="Objects" unique_id=465929938 instance=ExtResource("4_s8va5")]
 position = Vector2(1844, 945)
 
-[node name="Ring15" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring15" parent="Objects" unique_id=423137676 instance=ExtResource("4_s8va5")]
 position = Vector2(1884, 912)
 
-[node name="Ring16" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring16" parent="Objects" unique_id=2119631157 instance=ExtResource("4_s8va5")]
 position = Vector2(2498, 703)
 
-[node name="Ring17" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring17" parent="Objects" unique_id=1797626664 instance=ExtResource("4_s8va5")]
 position = Vector2(2526, 704)
 
-[node name="Ring18" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring18" parent="Objects" unique_id=2117311575 instance=ExtResource("4_s8va5")]
 position = Vector2(2967, 718)
 
-[node name="Ring19" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring19" parent="Objects" unique_id=500606720 instance=ExtResource("4_s8va5")]
 position = Vector2(2987, 719)
 
-[node name="Ring20" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring20" parent="Objects" unique_id=487125773 instance=ExtResource("4_s8va5")]
 position = Vector2(3411, 694)
 
-[node name="Ring21" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring21" parent="Objects" unique_id=2106202382 instance=ExtResource("4_s8va5")]
 position = Vector2(3440, 680)
 
-[node name="Ring22" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring22" parent="Objects" unique_id=1236059732 instance=ExtResource("4_s8va5")]
 position = Vector2(3472, 661)
 
-[node name="Ring23" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring23" parent="Objects" unique_id=1481253887 instance=ExtResource("4_s8va5")]
 position = Vector2(3511, 646)
 
-[node name="Ring24" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring24" parent="Objects" unique_id=946464716 instance=ExtResource("4_s8va5")]
 position = Vector2(3544, 631)
 
-[node name="Ring25" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring25" parent="Objects" unique_id=1483304670 instance=ExtResource("4_s8va5")]
 position = Vector2(3762, 529)
 
-[node name="Ring26" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring26" parent="Objects" unique_id=1920337002 instance=ExtResource("4_s8va5")]
 position = Vector2(3794, 524)
 
-[node name="Ring27" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring27" parent="Objects" unique_id=1415296700 instance=ExtResource("4_s8va5")]
 position = Vector2(3828, 517)
 
-[node name="Ring28" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring28" parent="Objects" unique_id=1001682625 instance=ExtResource("4_s8va5")]
 position = Vector2(3867, 517)
 
-[node name="Ring29" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring29" parent="Objects" unique_id=887496489 instance=ExtResource("4_s8va5")]
 position = Vector2(3902, 520)
 
-[node name="Ring30" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring30" parent="Objects" unique_id=1215726757 instance=ExtResource("4_s8va5")]
 position = Vector2(3945, 520)
 
-[node name="Ring31" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring31" parent="Objects" unique_id=627037901 instance=ExtResource("4_s8va5")]
 position = Vector2(4696, 575)
 
-[node name="Ring32" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring32" parent="Objects" unique_id=88787126 instance=ExtResource("4_s8va5")]
 position = Vector2(4733, 584)
 
-[node name="Ring33" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring33" parent="Objects" unique_id=1507142939 instance=ExtResource("4_s8va5")]
 position = Vector2(4768, 599)
 
-[node name="Ring34" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring34" parent="Objects" unique_id=1362949726 instance=ExtResource("4_s8va5")]
 position = Vector2(4803, 617)
 
-[node name="Ring35" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring35" parent="Objects" unique_id=551270061 instance=ExtResource("4_s8va5")]
 position = Vector2(4840, 625)
 
-[node name="Ring41" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring41" parent="Objects" unique_id=124966269 instance=ExtResource("4_s8va5")]
 position = Vector2(6482, 879)
 
-[node name="Ring42" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring42" parent="Objects" unique_id=664118508 instance=ExtResource("4_s8va5")]
 position = Vector2(6501, 878)
 
-[node name="Ring43" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring43" parent="Objects" unique_id=273875393 instance=ExtResource("4_s8va5")]
 position = Vector2(6551, 878)
 
-[node name="Ring44" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring44" parent="Objects" unique_id=1467399916 instance=ExtResource("4_s8va5")]
 position = Vector2(6574, 879)
 
-[node name="Ring45" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring45" parent="Objects" unique_id=1579521784 instance=ExtResource("4_s8va5")]
 position = Vector2(8037, 1151)
 
-[node name="Ring46" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring46" parent="Objects" unique_id=358666436 instance=ExtResource("4_s8va5")]
 position = Vector2(8060, 1149)
 
-[node name="Ring47" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring47" parent="Objects" unique_id=647668078 instance=ExtResource("4_s8va5")]
 position = Vector2(8081, 1151)
 
-[node name="Ring48" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring48" parent="Objects" unique_id=728923160 instance=ExtResource("4_s8va5")]
 position = Vector2(8105, 1151)
 
-[node name="Ring49" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring49" parent="Objects" unique_id=108004481 instance=ExtResource("4_s8va5")]
 position = Vector2(8126, 1153)
 
-[node name="Ring50" parent="Objects" instance=ExtResource("4_s8va5")]
+[node name="Ring50" parent="Objects" unique_id=350670874 instance=ExtResource("4_s8va5")]
 position = Vector2(8152, 1153)
 
-[node name="Enemy" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy" parent="Objects" unique_id=751039574 instance=ExtResource("6_qxy0u")]
 position = Vector2(827, 941)
 
-[node name="Enemy2" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy2" parent="Objects" unique_id=1775658860 instance=ExtResource("6_qxy0u")]
 position = Vector2(1051, 822)
 
-[node name="Enemy3" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy3" parent="Objects" unique_id=1083096144 instance=ExtResource("6_qxy0u")]
 position = Vector2(2218, 862)
 
-[node name="Enemy4" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy4" parent="Objects" unique_id=1103774672 instance=ExtResource("6_qxy0u")]
 position = Vector2(2392, 773)
 
-[node name="Enemy5" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy5" parent="Objects" unique_id=1574870976 instance=ExtResource("6_qxy0u")]
 position = Vector2(3147, 832)
 
-[node name="Enemy6" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy6" parent="Objects" unique_id=1359062001 instance=ExtResource("6_qxy0u")]
 position = Vector2(3391, 615)
 
-[node name="Enemy7" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy7" parent="Objects" unique_id=108140157 instance=ExtResource("6_qxy0u")]
 position = Vector2(3538, 624)
 
-[node name="Enemy8" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy8" parent="Objects" unique_id=618395316 instance=ExtResource("6_qxy0u")]
 position = Vector2(4114, 946)
 
-[node name="Enemy9" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy9" parent="Objects" unique_id=750504716 instance=ExtResource("6_qxy0u")]
 position = Vector2(4375, 881)
 
-[node name="Enemy10" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy10" parent="Objects" unique_id=1329077526 instance=ExtResource("6_qxy0u")]
 position = Vector2(4356, 625)
 
-[node name="Enemy11" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy11" parent="Objects" unique_id=759865445 instance=ExtResource("6_qxy0u")]
 position = Vector2(4895, 631)
 
-[node name="Enemy12" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy12" parent="Objects" unique_id=1032756167 instance=ExtResource("6_qxy0u")]
 position = Vector2(5196, 767)
 
-[node name="Enemy13" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy13" parent="Objects" unique_id=1659581834 instance=ExtResource("6_qxy0u")]
 position = Vector2(5716, 611)
 
-[node name="Enemy14" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy14" parent="Objects" unique_id=126262825 instance=ExtResource("6_qxy0u")]
 position = Vector2(6609, 886)
 
-[node name="Enemy15" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy15" parent="Objects" unique_id=2078171035 instance=ExtResource("6_qxy0u")]
 position = Vector2(7592, 1141)
 
-[node name="Enemy16" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy16" parent="Objects" unique_id=1522872800 instance=ExtResource("6_qxy0u")]
 position = Vector2(8135, 1200)
 
-[node name="Enemy17" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy17" parent="Objects" unique_id=1893118171 instance=ExtResource("6_qxy0u")]
 position = Vector2(8582, 1163)
 
-[node name="Enemy18" parent="Objects" instance=ExtResource("6_qxy0u")]
+[node name="Enemy18" parent="Objects" unique_id=1551558852 instance=ExtResource("6_qxy0u")]
 position = Vector2(9476, 1204)
 
-[node name="Goal" parent="Objects" instance=ExtResource("7_excbq")]
+[node name="Goal" parent="Objects" unique_id=478893451 instance=ExtResource("7_excbq")]
 position = Vector2(9635, 1211)
 
-[node name="Spike" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike" parent="Objects" unique_id=1903398087 instance=ExtResource("8_iav0o")]
 position = Vector2(3397, 895.00006)
 scale = Vector2(3, 3)
 
-[node name="Spike2" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike2" parent="Objects" unique_id=2089093158 instance=ExtResource("8_iav0o")]
 position = Vector2(3431, 895.00006)
 scale = Vector2(3, 3)
 
-[node name="Spike3" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike3" parent="Objects" unique_id=1616067507 instance=ExtResource("8_iav0o")]
 position = Vector2(3558, 882)
 scale = Vector2(2, 2)
 
-[node name="Spike4" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike4" parent="Objects" unique_id=1170675935 instance=ExtResource("8_iav0o")]
 position = Vector2(3923, 948.00006)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike5" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike5" parent="Objects" unique_id=1079817036 instance=ExtResource("8_iav0o")]
 position = Vector2(4016.0002, 950.00006)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike6" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike6" parent="Objects" unique_id=1044447368 instance=ExtResource("8_iav0o")]
 position = Vector2(4466, 882)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike7" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike7" parent="Objects" unique_id=1849637749 instance=ExtResource("8_iav0o")]
 position = Vector2(4569, 872.00006)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike8" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike8" parent="Objects" unique_id=217308846 instance=ExtResource("8_iav0o")]
 position = Vector2(4670, 872)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike9" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike9" parent="Objects" unique_id=901275911 instance=ExtResource("8_iav0o")]
 position = Vector2(5329, 819.00006)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike10" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike10" parent="Objects" unique_id=164510850 instance=ExtResource("8_iav0o")]
 position = Vector2(5374, 812)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike11" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike11" parent="Objects" unique_id=1268937260 instance=ExtResource("8_iav0o")]
 position = Vector2(5420, 812.00006)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike12" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike12" parent="Objects" unique_id=1631591601 instance=ExtResource("8_iav0o")]
 position = Vector2(7709.0005, 1199)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike13" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike13" parent="Objects" unique_id=778053236 instance=ExtResource("8_iav0o")]
 position = Vector2(8217, 1194)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike14" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike14" parent="Objects" unique_id=1627708474 instance=ExtResource("8_iav0o")]
 position = Vector2(8307, 895)
 scale = Vector2(1.5, 1.5)
 
-[node name="Spike15" parent="Objects" instance=ExtResource("8_iav0o")]
+[node name="Spike15" parent="Objects" unique_id=266393099 instance=ExtResource("8_iav0o")]
 position = Vector2(8287, 905)
 scale = Vector2(1.5, 1.5)
 
-[node name="CurvaTuberia" type="Node2D" parent="."]
+[node name="CurvaTuberia" type="Node2D" parent="." unique_id=1053971993]
 
-[node name="Camino1" type="Path2D" parent="CurvaTuberia"]
+[node name="Camino1" type="Path2D" parent="CurvaTuberia" unique_id=347298564]
 curve = SubResource("Curve2D_qxy0u")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="CurvaTuberia/Camino1"]
+[node name="PathFollow2D" type="PathFollow2D" parent="CurvaTuberia/Camino1" unique_id=937736706]
 position = Vector2(6143, 636)
 rotation = 0.03569911
 loop = false
 
-[node name="Camino2" type="Path2D" parent="CurvaTuberia"]
+[node name="Camino2" type="Path2D" parent="CurvaTuberia" unique_id=74809543]
 position = Vector2(515, 255)
 curve = SubResource("Curve2D_excbq")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="CurvaTuberia/Camino2"]
+[node name="PathFollow2D" type="PathFollow2D" parent="CurvaTuberia/Camino2" unique_id=1936530465]
 position = Vector2(6143, 636)
 rotation = 0.03569911
 loop = false
 
-[node name="Camino3" type="Path2D" parent="CurvaTuberia"]
+[node name="Camino3" type="Path2D" parent="CurvaTuberia" unique_id=2002706428]
 position = Vector2(513, -256)
 curve = SubResource("Curve2D_dga24")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="CurvaTuberia/Camino3"]
+[node name="PathFollow2D" type="PathFollow2D" parent="CurvaTuberia/Camino3" unique_id=214277437]
 position = Vector2(6143, 636)
 rotation = 0.03569911
 loop = false
 
-[node name="Trigger1" type="Area2D" parent="CurvaTuberia"]
+[node name="Trigger1" type="Area2D" parent="CurvaTuberia" unique_id=1531469447]
 script = ExtResource("8_qxy0u")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CurvaTuberia/Trigger1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CurvaTuberia/Trigger1" unique_id=1580722339]
 position = Vector2(6152, 622.5)
 shape = SubResource("RectangleShape2D_qxy0u")
 
-[node name="Trigger2" type="Area2D" parent="CurvaTuberia"]
+[node name="Trigger2" type="Area2D" parent="CurvaTuberia" unique_id=2119071331]
 script = ExtResource("8_qxy0u")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CurvaTuberia/Trigger2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CurvaTuberia/Trigger2" unique_id=369077027]
 position = Vector2(6668, 878)
 shape = SubResource("RectangleShape2D_qxy0u")
 
-[node name="Trigger3" type="Area2D" parent="CurvaTuberia"]
+[node name="Trigger3" type="Area2D" parent="CurvaTuberia" unique_id=1513309787]
 position = Vector2(-9, -513)
 script = ExtResource("8_qxy0u")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CurvaTuberia/Trigger3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CurvaTuberia/Trigger3" unique_id=1371933637]
 position = Vector2(6668, 878)
 shape = SubResource("RectangleShape2D_qxy0u")
 
-[node name="Looping" type="Node2D" parent="."]
+[node name="Looping" type="Node2D" parent="." unique_id=772950424]
 
-[node name="CaminoLoop" type="Path2D" parent="Looping"]
+[node name="CaminoLoop" type="Path2D" parent="Looping" unique_id=1309109726]
 curve = SubResource("Curve2D_iav0o")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Looping/CaminoLoop"]
+[node name="PathFollow2D" type="PathFollow2D" parent="Looping/CaminoLoop" unique_id=1837048329]
 position = Vector2(5412, 707)
 rotation = -0.07485985
 loop = false
 
-[node name="TriggerLoop" type="Area2D" parent="Looping"]
+[node name="TriggerLoop" type="Area2D" parent="Looping" unique_id=546595137]
 script = ExtResource("9_excbq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Looping/TriggerLoop"]
-position = Vector2(5441, 686)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Looping/TriggerLoop" unique_id=773905366]
+position = Vector2(5441, 615.4219)
 shape = SubResource("RectangleShape2D_excbq")
 
-[node name="Music" type="AudioStreamPlayer2D" parent="."]
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=152662618]
 stream = ExtResource("8_s8va5")
 autoplay = true
 
-[node name="OneWayPlatform" parent="." instance=ExtResource("9_dga24")]
+[node name="OneWayPlatform" parent="." unique_id=293592704 instance=ExtResource("9_dga24")]
 position = Vector2(5340, 742)
 scale = Vector2(3, 3)
 
-[node name="OneWayPlatform2" parent="." instance=ExtResource("9_dga24")]
+[node name="OneWayPlatform2" parent="." unique_id=552340691 instance=ExtResource("9_dga24")]
 position = Vector2(8830, 868)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=63502132]
 position_smoothing_enabled = true
 script = ExtResource("12_iav0o")

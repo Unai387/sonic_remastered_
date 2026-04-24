@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cttkcmphdqvyf"
-path="res://.godot/imported/Frenar.png-8fdd89ccc4f65c40f92324ad2f78bf2c.ctex"
+uid="uid://dcilagox3lpjx"
+path="res://.godot/imported/Idle.png-bac569bf01317851f4eefbb359783aa1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/sonic/Frenar.png"
-dest_files=["res://.godot/imported/Frenar.png-8fdd89ccc4f65c40f92324ad2f78bf2c.ctex"]
+source_file="res://assets/sprites/sonic/Quieto/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-bac569bf01317851f4eefbb359783aa1.ctex"]
 
 [params]
 

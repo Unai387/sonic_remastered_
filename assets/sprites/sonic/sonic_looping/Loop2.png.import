@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcilagox3lpjx"
-path="res://.godot/imported/Idle.png-b36dee9c6e2ecc187a36927c03709f63.ctex"
+uid="uid://ba2e54o8mun7o"
+path="res://.godot/imported/Loop2.png-e4deebe1f601d092a512455d9e074f7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/sonic/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-b36dee9c6e2ecc187a36927c03709f63.ctex"]
+source_file="res://assets/sprites/sonic/sonic_looping/Loop2.png"
+dest_files=["res://.godot/imported/Loop2.png-e4deebe1f601d092a512455d9e074f7e.ctex"]
 
 [params]
 

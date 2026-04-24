@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh35pjp7fd05v"
-path="res://.godot/imported/Correr1.png-43586fc59a2ef6363e4dd152c6bbeeca.ctex"
+uid="uid://b7tf5p5rubwyr"
+path="res://.godot/imported/Loop4.png-987161ef9ce1c321a0909343594be4d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/sonic/Correr1.png"
-dest_files=["res://.godot/imported/Correr1.png-43586fc59a2ef6363e4dd152c6bbeeca.ctex"]
+source_file="res://assets/sprites/sonic/sonic_looping/Loop4.png"
+dest_files=["res://.godot/imported/Loop4.png-987161ef9ce1c321a0909343594be4d2.ctex"]
 
 [params]
 

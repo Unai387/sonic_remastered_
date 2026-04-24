@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd2712hwgrlxf"
-path="res://.godot/imported/Rueda2.png-f56486ff5228c670a1bb71acb359ddd4.ctex"
+uid="uid://s8k3cdfmp1f4"
+path="res://.godot/imported/Caminar.png-36a550892ef90d6f6ed767b227640fee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/sonic/Rueda2.png"
-dest_files=["res://.godot/imported/Rueda2.png-f56486ff5228c670a1bb71acb359ddd4.ctex"]
+source_file="res://assets/sprites/sonic/Caminar/Caminar.png"
+dest_files=["res://.godot/imported/Caminar.png-36a550892ef90d6f6ed767b227640fee.ctex"]
 
 [params]
 

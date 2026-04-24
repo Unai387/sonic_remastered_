@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yt0m3a6t304c"
-path="res://.godot/imported/Rueda1.png-f52c8e77f7563c952112646d5307236d.ctex"
+uid="uid://kr7b0bvhxg2e"
+path="res://.godot/imported/Rueda5.png-4954b05df73a3c5b6f9fae7996c338a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/sonic/Rueda1.png"
-dest_files=["res://.godot/imported/Rueda1.png-f52c8e77f7563c952112646d5307236d.ctex"]
+source_file="res://assets/sprites/sonic/Rueda/Rueda5.png"
+dest_files=["res://.godot/imported/Rueda5.png-4954b05df73a3c5b6f9fae7996c338a4.ctex"]
 
 [params]
 

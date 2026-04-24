@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://bqdopypqt6p50"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://bqdopypqt6p50"]
 
 [ext_resource type="Texture2D" uid="uid://n82uqjey51v6" path="res://assets/sprites/sonic/Caminando.png" id="1_82a1j"]
 [ext_resource type="Texture2D" uid="uid://c7dk8e3k2oxkg" path="res://assets/sprites/derrotado.png" id="1_rt01i"]

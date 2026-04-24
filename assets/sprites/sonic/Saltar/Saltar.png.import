@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bagwv5pk2fmpb"
-path="res://.godot/imported/Correr3.png-d1accfd4804a9884ddbbe21cb2001f2b.ctex"
+uid="uid://cv12lwjbcaewx"
+path="res://.godot/imported/Saltar.png-5d5b70ccd4cce7b4beef74c102f06f97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/sonic/Correr3.png"
-dest_files=["res://.godot/imported/Correr3.png-d1accfd4804a9884ddbbe21cb2001f2b.ctex"]
+source_file="res://assets/sprites/sonic/Saltar/Saltar.png"
+dest_files=["res://.godot/imported/Saltar.png-5d5b70ccd4cce7b4beef74c102f06f97.ctex"]
 
 [params]
 
