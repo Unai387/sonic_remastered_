@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://bqdopypqt6p50"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://bqdopypqt6p50"]
 
 [ext_resource type="Texture2D" uid="uid://bvepr78jp7131" path="res://assets/sprites/Boss/Volandoo.png" id="1_u102o"]
 [ext_resource type="Texture2D" uid="uid://c7dk8e3k2oxkg" path="res://assets/sprites/Boss/derrotado.png" id="2_m24hp"]

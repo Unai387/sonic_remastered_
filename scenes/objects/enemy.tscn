@@ -1,19 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqvuedkgdc0mo"]
+[gd_scene format=3 uid="uid://dqvuedkgdc0mo"]
 
 [ext_resource type="Script" uid="uid://j00vd2q10ath" path="res://scipts/enemy.gd" id="1_ja0ge"]
 [ext_resource type="SpriteFrames" uid="uid://b4llxb3drdblr" path="res://resources/enemy_animations.tres" id="2_lp353"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lp353"]
-size = Vector2(62, 37)
-
-[node name="Enemy" type="Area2D"]
+[node name="Enemy" type="Area2D" unique_id=1323042502]
 script = ExtResource("1_ja0ge")
 
-[node name="EnemysSprite" type="AnimatedSprite2D" parent="."]
+[node name="EnemysSprite" type="AnimatedSprite2D" parent="." unique_id=1465772372]
 scale = Vector2(0.4, 0.4)
 sprite_frames = ExtResource("2_lp353")
 animation = &"alante"
 
-[node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 1.5)
-shape = SubResource("RectangleShape2D_lp353")
+[node name="Collision" type="CollisionPolygon2D" parent="." unique_id=1077176715]
+position = Vector2(-68, -12)
+polygon = PackedVector2Array(40, 19, 42, 19, 44, 20, 46, 21, 46, 23, 44, 24, 46, 26, 49, 27, 51, 26, 52, 28, 55, 28, 56, 27, 58, 28, 66, 28, 72, 29, 73, 27, 83, 27, 85, 26, 89, 25, 91, 22, 91, 17, 91, 14, 93, 11, 92, 8, 91, 6, 85, 5, 80, 9, 76, 9, 73, 7, 71, 7, 69, 9, 66, 10, 64, 11, 62, 11, 61, 10, 61, 10, 59, 8, 57, 8, 55, 7, 52, 7, 50, 8, 49, 8, 48, 10, 46, 12, 45, 13, 44, 14, 43, 15, 42, 16)

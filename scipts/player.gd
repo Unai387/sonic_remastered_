@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-# --- TUS CONSTANTES ORIGINALES (Páginas 6 y 7 del PDF) ---
+# --- TUS CONSTANTES ORIGINALES ---
 const ACCELERATION = 1200.0
 const DECELERATION = 800.0
 const MAX_SPEED = 400.0
@@ -11,29 +11,30 @@ const MAX_FALL_SPEED = 800.0
 const WALL_JUMP_VELOCITY = Vector2(400, -500)
 const WALL_SLIDE_SPEED = 100.0
 
-var coyote_timer = 0.0
-const COYOTE_DURATION = 0.15 # Duración del margen (puedes ajustarlo)
+# --- PRELOAD DEL ANILLO ---
+# Asegúrate de que esta ruta sea la correcta en tu proyecto
+@onready var RingScene = preload("res://scenes/objects/ring.tscn")
 
-# --- VARIABLES DE VIDA ---
+var coyote_timer = 0.0
+const COYOTE_DURATION = 0.15 
+
+# --- VARIABLES DE VIDA Y ANILLOS ---
 @export var vidas: int = 3
 var esta_invulnerable = false
-
-# Variables de movimiento originales
 var speed = 0.0
 var rings = 0
 var is_on_wall_slide = false
 
 func _ready():
-	# Sincronización inicial
 	if GameManager:
 		GameManager.lives = vidas
 
 func _physics_process(delta):
 	# Gravedad
 	if is_on_floor():
-		coyote_timer = COYOTE_DURATION # Mientras toque el suelo, el timer está lleno
+		coyote_timer = COYOTE_DURATION 
 	else:
-		coyote_timer -= delta # Si está en el aire, el tiempo empieza a correr
+		coyote_timer -= delta 
 
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
@@ -47,7 +48,7 @@ func _physics_process(delta):
 	else:
 		is_on_wall_slide = false
 	
-	# Física de pendientes (Tu lógica de la pág. 6)
+	# Física de pendientes
 	var floor_normal = get_floor_normal()
 	var is_on_slope = is_on_floor() and abs(floor_normal.x) > 0.2
 	
@@ -74,9 +75,9 @@ func _physics_process(delta):
 			velocity.x = wall_normal.x * WALL_JUMP_VELOCITY.x
 			velocity.y = WALL_JUMP_VELOCITY.y
 			speed = velocity.x
-		elif coyote_timer > 0: # Ahora salta si el timer aún tiene tiempo, no solo si toca el suelo
+		elif coyote_timer > 0:
 			velocity.y = JUMP_VELOCITY
-			coyote_timer = 0 # Gastamos el timer para que no salte dos veces en el aire
+			coyote_timer = 0 
 	move_and_slide()
 	update_animation()
 
@@ -96,97 +97,91 @@ func update_animation():
 	if new_animation != "" and $sonic_animations.animation != new_animation:
 		$sonic_animations.play(new_animation)
 
-# --- FUNCIÓN DE ANILLOS ---
+# --- FUNCIONES DE ANILLOS ---
+
 func collect_ring():
 	rings += 1
+	actualizar_hud_anillos()
 	if GameManager:
 		GameManager.add_ring()
 
-# --- LÓGICA DE DAÑO UNIFICADA (4 GOLPES REALES) ---
+func soltar_anillos_al_aire():
+	var cantidad = min(rings, 15) # Soltamos máximo 15 para no saturar
+	for i in range(cantidad):
+		var nuevo_ring = RingScene.instantiate()
+		get_parent().add_child(nuevo_ring) # Lo añadimos al nivel
+		nuevo_ring.global_position = global_position
+		
+		# Física de explosión
+		var angulo = randf_range(0, TAU)
+		var fuerza = randf_range(200, 450)
+		
+		# Pasamos los datos al script del anillo
+		if "soltado" in nuevo_ring:
+			nuevo_ring.soltado = true
+			nuevo_ring.velocidad = Vector2(cos(angulo), sin(angulo)) * fuerza
+
+func actualizar_hud_anillos():
+	var hud_node = get_tree().current_scene.find_child("Hud", true, false)
+	if hud_node:
+		hud_node.actualizar_interfaz_anillos(rings)
+
+# --- LÓGICA DE DAÑO ---
 
 func recibir_dano():
-	if esta_invulnerable: 
-		return
+	if esta_invulnerable: return
 	
-	# Si las vidas ya son 0, no permitimos que nada las resetee aquí
 	if vidas <= 0:
-		print("MUERTE CRÍTICA: Cambiando a Game Over...")
 		die()
 		return
 
-	# Restamos vida
 	vidas -= 1
 	
-	# Actualizamos el HUD (Importante para tus corazones)
 	var hud_node = get_tree().current_scene.find_child("Hud", true, false)
 	if hud_node and hud_node.has_method("actualizar_interfaz_vidas"):
 		hud_node.actualizar_interfaz_vidas(vidas)
 	
-	# Sincronizamos con GameManager (solo para que él lo sepa)
 	if GameManager:
 		GameManager.lives = vidas
 	
-	print("GOLPE RECIBIDO. Vidas restantes: ", vidas)
+	aplicar_efecto_dano()
 	
-	if vidas > 0:
-		aplicar_efecto_dano()
-	else:
-		# Si con este golpe llegó a 0, le damos una última oportunidad 
-		# de estar vivo (el famoso 4º golpe que pediste)
-		aplicar_efecto_dano()
-		
-	# --- ACTIVAR TEMBLOR ---
-	# Como la cámara es hija de Sonic, la llamamos directamente por su nombre
-	# Asegúrate de que el nombre coincida (si se llama Camera2D, usa $Camera2D)
 	if has_node("Camera2D"):
 		$Camera2D.apply_shake(5.0)
 
+func hit():
+	if esta_invulnerable: return
+	
+	if rings > 0:
+		soltar_anillos_al_aire() # ¡Ahora salen volando!
+		rings = 0
+		actualizar_hud_anillos()
+		if GameManager:
+			GameManager.lose_rings()
+		aplicar_efecto_dano()
+	else:
+		recibir_dano()
+
 func aplicar_efecto_dano():
-	# 1. ACTIVAR INVULNERABILIDAD
 	esta_invulnerable = true
 	
-	# 2. SELECCIONAR ANIMACIÓN (Sin cambiar escalas)
 	if $sonic_animations.sprite_frames.has_animation("loop"):
 		$sonic_animations.play("loop")
-	elif $sonic_animations.sprite_frames.has_animation("hurt"):
-		$sonic_animations.play("hurt")
 	
-	# 3. PONER COLOR ROJO
-	$sonic_animations.modulate = Color(1, 0, 0) # Rojo
-	
-	# 4. EFECTO DE RETROCESO (Knockback)
-	# Usamos el scale.x actual para saber hacia dónde mirar
+	# Retroceso
 	var knockback_dir = -1 if $sonic_animations.scale.x > 0 else 1
 	velocity.x = knockback_dir * 300
 	velocity.y = -250
 	
-	# 5. EFECTO VISUAL: PARPADEO (Transparencia)
-	# Solo animamos la propiedad "a" (alpha) para no tocar el color rojo
+	# Parpadeo
 	var tween = create_tween().set_loops(10)
 	tween.tween_property($sonic_animations, "modulate:a", 0.2, 0.1)
 	tween.tween_property($sonic_animations, "modulate:a", 1.0, 0.1)
 	
-	# 6. TEMPORIZADOR DE SEGURIDAD
 	await get_tree().create_timer(2.0).timeout
 	
-	# 7. REGRESO A LA NORMALIDAD
 	esta_invulnerable = false
-	$sonic_animations.modulate = Color(1, 1, 1) # Volvemos al color original (blanco)
-	# Nos aseguramos de que el alpha sea 1 por si el tween terminó en 0.2
-	$sonic_animations.modulate.a = 1.0 
-	print("Sonic ya no es invulnerable")
-
-# Mantenemos hit() pero hacemos que TAMBIÉN llame a recibir_dano si quieres que el Boss sea letal
-func hit():
-	if rings > 0:
-		rings = 0
-		if GameManager:
-			GameManager.lose_rings()
-		# Si quieres que los anillos te protejan de morir, deja esto. 
-		# Si quieres morir en 4 golpes SIEMPRE, quita el 'if rings' y deja solo recibir_dano()
-		aplicar_efecto_dano() 
-	else:
-		recibir_dano()
+	$sonic_animations.modulate.a = 1.0
 
 func die():
 	var game_over_path = "res://scenes/ui/GameOver.tscn"
